@@ -1,0 +1,174 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+/* global.css */
+.shadow-left-bottom {
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-left-bottom-light {
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-left-right-light {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar {
+    background: transparent; 
+    transition: width 0.3s ease-in-out;
+    width: 80px;
+    height: calc(100vh - 64px);
+    position: fixed;
+    top: 64px;
+    left: 0;
+    z-index: 100;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.sidebar-expanded {
+    width: 210px; 
+}
+
+.sidebar-menu-item {
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    background: transparent;
+}
+
+.sidebar-menu-item:hover {
+    width: 200px;
+    background-color: rgba(34, 31, 31, 0.5);
+}
+
+.sidebar-menu-text {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.sidebar-expanded .sidebar-menu-text {
+    opacity: 1; /* Teks muncul ketika di-hover */
+}
+
+.ant-input-wrapper {
+    padding-top: 20px!important;
+}
+
+aside {
+    width: 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  aside:hover {
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+    flex: 0 0 200px !important;
+  }
+
+.ant-layout-sider {
+    background: transparent !important;
+    border: none;
+    width: 80px!important;
+}
+
+.ant-layout-sider:hover {
+    width: 200px!important;
+}
+
+.ant-menu {
+    color: #ffffff!important;
+    background: transparent !important;
+    border: none;
+}
+
+.ant-menu:hover {
+    background-color: rgba(34, 31, 31, 0.5);
+}
+
+.ant-menu-item {
+    color: #ffffff!important;
+}
+
+.ant-menu-item:hover {
+    background-color: rgba(34, 31, 31, 0.5);
+    font-weight: bold;
+    color: #00ff00!important;
+}
+
+.ant-menu-item-selected {
+    background-color: transparent!important;
+    color: #00FFFF!important;
+}
+
+.btn-update {
+    background-color: #008000;
+    border-color: #008000;
+    color: white;
+    margin-right: 4px; 
+}
+
+.btn-update:hover {
+    background-color: #06402B!important;
+    border-color: #008000!important;
+    color: white!important;
+    margin-right: 4px; 
+}
+
+.btn-delete {
+    background-color: #FF0000!important;
+    border-color: #FF0000;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #800000!important;
+    border-color: #FF0000!important;
+    color: white!important;
+}
+
+.content {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content-expanded {
+    margin-left: 120px; /* Sesuaikan dengan lebar sidebar saat expanded */
+}
+
+.content-collapsed {
+    margin-left: 0px; /* Lebar sidebar saat tidak expanded */
+}
+
+/* Gaya untuk scrollbar secara umum */
+::-webkit-scrollbar {
+    width: 15px; /* Lebar scrollbar */
+    height: 8px; /* Tinggi scrollbar (untuk horizontal scrollbar) */
+  }
+  
+  /* Gaya untuk track scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Warna latar belakang track */
+    border-radius: 10px; /* Membuat track lebih bulat */
+  }
+  
+  /* Gaya untuk thumb scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #008000; /* Warna thumb scrollbar */
+    border-radius: 10px; /* Membuat thumb lebih bulat */
+    border: 2px solid #f1f1f1; /* Menambahkan border untuk kontras */
+  }
+  
+  /* Gaya untuk thumb scrollbar saat di-hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #004d00; /* Warna thumb saat di-hover */
+  }
+  
