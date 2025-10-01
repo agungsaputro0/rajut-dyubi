@@ -149,7 +149,7 @@ const BlogCatalog: React.FC = () => {
                   <h2 className="text-lg font-semibold">{blog.title}</h2>
                   <p className="text-rajutGray text-sm line-clamp-2">{blog.excerpt}</p>
                   {/* Icons like BlogCard */}
-                  <div className="flex items-center gap-4 text-gray-500 text-xs mt-2">
+                  <div className="flex justify-center sm:justify-start items-center gap-4 text-gray-500 text-xs mt-2">
                     <div className="flex items-center gap-1">
                       <CalendarOutlined /> {new Date(blog.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                     </div>

@@ -134,62 +134,61 @@ const ProductCatalog: React.FC = () => {
           </div>
         ) : (
           <div className="space-y-4">
-            {paginatedProducts.map((product) => (
-              <div
-                key={product.productID}
-                className="flex flex-col sm:flex-row gap-4 items-center bg-white rounded-xl shadow-md p-4"
-              >
-                <img
-                  src={product.images[0]}
-                  alt={product.name}
-                  className="w-32 h-32 object-cover rounded-lg"
-                />
-                <div className="flex-1 text-center sm:text-left">
-                  <h2 className="text-lg font-semibold">{product.name}</h2>
-                  <p className="text-rajutGray text-sm">{product.category}</p>
+  {paginatedProducts.map((product) => (
+    <div
+      key={product.productID}
+      className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start bg-white rounded-xl shadow-md p-4 sm:p-6"
+    >
+      {/* Gambar */}
+      <img
+        src={product.images[0]}
+        alt={product.name}
+        className="w-full max-w-[150px] h-auto object-cover rounded-lg"
+      />
 
-                  {/* Harga dan diskon */}
-                  <div className="mt-1">
-                    {product.discountPrice ? (
-                      <>
-                        <span className="text-rajutBoldPink font-bold mr-2">
-                          Rp {product.discountPrice.toLocaleString("id-ID")}
-                        </span>
-                        <span className="line-through text-gray-400 text-sm">
-                          Rp {product.price.toLocaleString("id-ID")}
-                        </span>
-                      </>
-                    ) : (
-                      <span className="text-rajutBoldPink font-bold">
-                        Rp {product.price.toLocaleString("id-ID")}
-                      </span>
-                    )}
-                  </div>
+      {/* Info Produk */}
+      <div className="flex-1 text-center sm:text-left">
+        <h2 className="text-lg font-semibold">{product.name}</h2>
+        <p className="text-rajutGray text-sm">{product.category}</p>
 
-                  {/* Rating & review */}
-                  <div className="flex items-center justify-center sm:justify-start mt-2 gap-2">
-                    <Rate
-                      disabled
-                      defaultValue={product.rating}
-                      style={{ fontSize: 14 }}
-                    />
-                    <span className="text-sm text-gray-600">
-                      ({product.reviews} review
-                      {product.reviews > 1 ? "s" : ""})
-                    </span>
-                  </div>
-                </div>
+        {/* Harga dan diskon */}
+        <div className="mt-1">
+          {product.discountPrice ? (
+            <>
+              <span className="text-rajutBoldPink font-bold mr-2">
+                Rp {product.discountPrice.toLocaleString("id-ID")}
+              </span>
+              <span className="line-through text-gray-400 text-sm">
+                Rp {product.price.toLocaleString("id-ID")}
+              </span>
+            </>
+          ) : (
+            <span className="text-rajutBoldPink font-bold">
+              Rp {product.price.toLocaleString("id-ID")}
+            </span>
+          )}
+        </div>
 
-                {/* Tombol Pesan */}
-                <div className="self-end">
-                    <button className="flex items-center gap-2 bg-rajutBoldPink text-white rounded-full px-5 py-2 text-sm font-medium hover:bg-rajutPink transition">
-                    <FiShoppingBag />
-                    Pesan Sekarang
-                    </button>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Rating & review */}
+        <div className="flex items-center justify-center sm:justify-start mt-2 gap-2">
+          <Rate disabled defaultValue={product.rating} style={{ fontSize: 14 }} />
+          <span className="text-sm text-gray-600">
+            ({product.reviews} review{product.reviews > 1 ? "s" : ""})
+          </span>
+        </div>
+      </div>
+
+      {/* Tombol Pesan */}
+      <div className="w-full sm:w-auto mt-4 sm:mt-0">
+        <button className="w-full sm:w-auto flex justify-center items-center gap-2 bg-rajutBoldPink text-white rounded-full px-5 py-2 text-sm font-medium hover:bg-rajutPink transition">
+          <FiShoppingBag />
+          Pesan Sekarang
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
         )}
 
         {/* Pagination */}
