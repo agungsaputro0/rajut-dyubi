@@ -4,6 +4,21 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/font/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  src: url('./assets/font/DancingScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* global.css */
 .shadow-left-bottom {
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
@@ -18,12 +33,11 @@
 }
 
 .sidebar {
-    background: transparent; 
     transition: width 0.3s ease-in-out;
     width: 80px;
-    height: calc(100vh - 64px);
+    height: calc(100dvh);
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
     z-index: 100;
     color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -33,6 +47,10 @@
     width: 210px; 
 }
 
+.sideBarIcon {
+    font-size: 80px;
+}
+
 .sidebar-menu-item {
     color: rgb(31 41 55 / var(--tw-text-opacity));
     display: flex;
@@ -40,10 +58,11 @@
     padding: 10px 20px;
     transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
     background: transparent;
+    height: 45px!important;
 }
 
 .sidebar-menu-item:hover {
-    width: 200px;
+    width: 193px;
     background-color: rgba(34, 31, 31, 0.5);
 }
 
@@ -69,10 +88,10 @@ aside {
   }
 
   aside:hover {
-    width: 200px !important;
-    max-width: 200px !important;
-    min-width: 200px !important;
-    flex: 0 0 200px !important;
+    width: 210px !important;
+    max-width: 210px !important;
+    min-width: 210px !important;
+    flex: 0 0 210px !important;
   }
 
 .ant-layout-sider {
@@ -156,19 +175,49 @@ aside {
   
   /* Gaya untuk track scrollbar */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Warna latar belakang track */
-    border-radius: 10px; /* Membuat track lebih bulat */
+    background: #FEC5E5; /* Warna latar belakang track */
   }
   
   /* Gaya untuk thumb scrollbar */
   ::-webkit-scrollbar-thumb {
-    background: #008000; /* Warna thumb scrollbar */
-    border-radius: 10px; /* Membuat thumb lebih bulat */
-    border: 2px solid #f1f1f1; /* Menambahkan border untuk kontras */
+    background: #FC46AA; /* Warna thumb scrollbar */
+    border-radius: 5px; /* Membuat thumb lebih bulat */
+    border: 2px solid #FF1694; /* Menambahkan border untuk kontras */
   }
   
   /* Gaya untuk thumb scrollbar saat di-hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #004d00; /* Warna thumb saat di-hover */
+    background: #FC4C4E; /* Warna thumb saat di-hover */
   }
   
+  /* Hover row: background hijau, teks putih */
+.ant-table-tbody > tr:hover > td {
+  background-color: #007D00 !important; /* green-700 */
+  color: white !important;
+}
+
+/* Header bg hijau & text putih */
+.ant-table-thead > tr > th {
+  background-color: #002e12 !important;
+  color: white !important;
+  font-weight: 600;
+  user-select: none;
+}
+.custom-table tr.ant-table-row:nth-child(even) > td:last-child {
+  background-color: #4d7c0f !important; /* contoh warna biru tua */
+  color: white !important;
+}
+
+.custom-table tr.ant-table-row:nth-child(odd) > td:last-child {
+  background-color: #65a30d  !important; /* contoh warna biru lebih terang */
+  color: white !important;
+}
+
+.button-update:hover {
+    background-color: #002e12!important;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+

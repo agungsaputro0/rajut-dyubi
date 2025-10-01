@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`h-10 px-6 font-semibold rounded-md ${variant} text-white sm:h-12 sm:px-8`}
+      className={`px-6 font-semibold rounded-full ${variant} sm:px-8`}
       type={type}
       disabled={disabled}
     >

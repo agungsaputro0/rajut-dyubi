@@ -1,6 +1,7 @@
 import Homeshell from "../shell/HomeShell";
 import { Helmet } from "react-helmet";
-import { AreaChartOutlined } from "@ant-design/icons";
+import WasteVolumeChart from "../atoms/WasteVolumeChart";
+import WasteTypeDistributionChart from "../atoms/WasteTypeDistributionChart";
 const appName = import.meta.env.VITE_APP_NAME; 
 const Home = () => {
     return (
@@ -10,10 +11,9 @@ const Home = () => {
                     <title>{appName}</title>
                 </Helmet>
                 <div className="flex justify-center h-screen items-center">
-                    <div className="w-full pl-10 pr-10">
-                        <center>
-                            <h1 className="text-4xl  text-white"><AreaChartOutlined /> | Pre - Dashboard</h1>
-                        </center>
+                    <div className="w-full pl-10 pr-10 flex gap-8">
+                        <WasteVolumeChart />
+                        <WasteTypeDistributionChart />
                     </div>
                 </div>
                 </div>

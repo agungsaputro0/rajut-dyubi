@@ -1,107 +1,76 @@
 import Button from "../atoms/Button";
 import { useNavigate } from "react-router-dom";
-import { LoginOutlined } from "@ant-design/icons";
-import { CompassOutlined, BarChartOutlined, ShoppingOutlined } from '@ant-design/icons';
-import FeatureCard from "../atoms/FeatureCard";
-import Slider from "react-slick";
-import { MdLocalShipping } from 'react-icons/md';
+import useIsMobile from '../hooks/UseIsMobile';
 
 type LandingProps = {
-    layoutMessage: string;
-    layoutTitle: string;
-}
+  layoutMessage: string;
+  layoutTitle: string;
+  layoutSubtitle: string;
+};
 
 const LandingLayouts = (props: LandingProps) => {
-    const navigate = useNavigate();
-    const { layoutTitle, layoutMessage } = props;
+  const navigate = useNavigate();
+  const isMobile = useIsMobile();
+  const { layoutTitle, layoutSubtitle, layoutMessage } = props;
 
-    const features = [
-        {
-            icon: <CompassOutlined style={{ fontSize: '48pt', marginTop: '10px', color: '#008080' }} />,
-            title: 'Cari Bank Sampah',
-            description: 'Temukan bank sampah terdekat dari lokasi Anda saat ini',
-        },
-        {
-            icon: <MdLocalShipping style={{ fontSize: '48pt', marginTop: '10px', color: '#008080' }} />,
-            title: 'Pick Up',
-            description: 'Setorkan sampah Anda melalui bank sampah keliling tanpa perlu ke lokasi',
-        },
-        {
-            icon: <ShoppingOutlined style={{ fontSize: '48pt', marginTop: '10px', color: '#008080' }} />,
-            title: 'Marketplace',
-            description: 'Temukan produk-produk terbaik hasil daur ulang dari berbagai penjual',
-        },
-        {
-            icon: <BarChartOutlined style={{ fontSize: '48pt', marginTop: '10px', color: '#008080' }} />,
-            title: 'Insight',
-            description: 'Dapatkan analisis performa dan laporan transaksi Anda di WasteTrack',
-        },
-    ];
+  return (
+    <div className="min-h-screen-default mt-16 w-full py-10 flex flex-col lg:flex-row relative bg-cover bg-center">
+      {/* Overlay hitam transparan */}
+      <div className="absolute inset-0 bg-black/10 z-0"></div>
 
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        centerMode: true,
-        centerPadding: "0px",
-        slidesToShow: 3,
-        swipeToSlide: true,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 1050,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 750,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 2
-              }
-            }
-          ]
-    };
+      {/* Konten Kiri */}
+      <div className="flex items-center justify-center w-full lg:w-1/2 px-6 sm:px-12 lg:px-16 z-10 order-1 lg:order-none">
+        <div className="max-w-lg text-center lg:text-left">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-rajutBoldPink leading-tight drop-shadow-lg font-light">
+            {layoutTitle}
+          </h1>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-rajutGold drop-shadow-md font-extralight">
+            {layoutSubtitle}
+          </h2>
+          <p className="mt-4 text-sm sm:text-md text-rajutGray text-justify lg:text-justify drop-shadow-md font-light">
+            {layoutMessage}
+          </p>
 
-    return (
-        <div className="pt-40 pb-10 flex flex-col justify-between items-center min-h-screen px-4">
-            <div className="w-full px-10">
-                <center>
-                    <h1 className="text-4xl font-bold text-white">
-                        {layoutTitle} Waste<span className="text-amber-400">Track</span>
-                    </h1>
-                    <h3 className="mt-2 text-2xl text-white">{layoutMessage}</h3>
-                    <Button
-                        message=""
-                        onClick={() => navigate("/login")}
-                        variant="hover:bg-lime-300 hover:text-lime-950 bg-transparent mt-8 border-solid border-2 border-lime-400 text-white sm:h-[35px] h-[35px]">
-                        <LoginOutlined /> &nbsp;Login
-                    </Button>
-                </center>
-                <div className="mt-20 custom-slider-container">
-                    <Slider {...sliderSettings}>
-                        {features.map((feature, index) => (
-                            <div key={index} className="custom-slide justify-items-center">
-                                <FeatureCard
-                                    icon={feature.icon}
-                                    title={feature.title}
-                                    description={feature.description}
-                                />
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            </div>
+          {/* Tombol */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Button
+              message=""
+              onClick={() => navigate("/katalog")}
+              variant="min-h-10 bg-rajutBoldPink hover:bg-rajutPink text-white px-6 rounded-full font-poppins"
+            >
+              Koleksi Terbaru
+            </Button>
+
+            <Button
+              message=""
+              onClick={() => navigate("/katalog")}
+              variant="min-h-10 bg-transparent border-2 border-rajutPink text-rajutPink hover:bg-rajutPink hover:text-white px-6 rounded-full font-poppins"
+            >
+              Customs Order
+            </Button>
+          </div>
         </div>
-    );
-}
+      </div>
+
+      {/* Konten Kanan: Gambar */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-4 my-8 lg:mt-0">
+        <div className="relative inline-block">
+          {/* Bola kiri atas */}
+          <div className="absolute -top-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-rajutLiteGold z-0"></div>
+
+          {/* Bola kanan bawah */}
+          <div className="absolute -bottom-6 -right-6 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-rajutBoldPeach z-0"></div>
+
+          {/* Gambar utama */}
+          <img
+            src="/assets/img/rajut-dyubi-banner-image.jpg"
+            alt="Rajut Dyubi Banner"
+            className={`${isMobile ? "max-h-[30vh] sm:max-h-[40vh]" : "max-h-[50vh] sm:max-h-[60vh]"}  rounded-xl w-auto object-contain drop-shadow-lg relative z-10`}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default LandingLayouts;

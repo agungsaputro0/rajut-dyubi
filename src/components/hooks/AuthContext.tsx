@@ -7,6 +7,7 @@ import LoadingSpinner from '../atoms/LoadingSpinner';
 
 type AuthContextType = {
   userName: string | null;
+  userAvatar: string | null;
   userKategori: string | null;
   userAuth: number[] | null;
   loading: boolean;
@@ -18,6 +19,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [userName, setUserName] = useState<string | null>(null);
+  const [userAvatar, setUserAvatar] = useState<string | null>(null);
   const [userKategori, setuserKategori] = useState<string | null>(null);
   const [userAuth, setUserAuth] = useState<number[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -34,9 +36,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       }
 
       try {
-        const response = await axios.get(`${baseURL}/me`, { withCredentials: true });
+        const response = await axios.get(`${baseURL}/credential/me`, { withCredentials: true });
         if (response.data && response.data.name) {
           setUserName(response.data.name);
+          setUserAvatar(response.data.avatar);
           setuserKategori(response.data.kategori);
           setUserAuth(response.data.auth);
           dispatch(loginSuccess(response.data.name));
@@ -46,6 +49,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       } catch (error) {
         console.error('Error fetching user data:', error);
         setUserName(null);
+        setUserAvatar(null);
         setuserKategori(null);
         setUserAuth(null);
         dispatch(logoutAction());
@@ -77,7 +81,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ userName, userKategori, userAuth, loading, login, logout }}>
+    <AuthContext.Provider value={{ userName, userAvatar, userKategori, userAuth, loading, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

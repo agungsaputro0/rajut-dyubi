@@ -1,0 +1,29 @@
+[
+  {
+    "productID": "1",
+    "images": ["/assets/img/produk/dompet-rajut.jpg"],
+    "name": "Dompet Rajut Double Colour",
+    "price": 100000,
+    "discountPrice": 75000,
+    "rating": 4.5,
+    "reviews": 24
+  },
+  {
+    "productID": "2",
+    "images": ["/assets/img/produk/double-cherry.jpg"],
+    "name": "Double Cherry Little Cat",
+    "price": 25000,
+    "discountPrice": 12500,
+    "rating": 4.8,
+    "reviews": 18
+  },
+  {
+    "productID": "3",
+    "images": ["/assets/img/produk/hand-bag.jpg"],
+    "name": "Elegant Hand Bag",
+    "price": 300000,
+    "discountPrice": 200000,
+    "rating": 4.7,
+    "reviews": 32
+  }
+]

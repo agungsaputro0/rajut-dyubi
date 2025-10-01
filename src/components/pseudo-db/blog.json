@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "10 Essential Crochet Stitches Every Beginner Must Know",
+    "excerpt": "Master these fundamental stitches to unlock endless creative possibilities in your crochet projects. From single crochet to slip stitch, these basics are the foundation of every piece you’ll make...",
+    "date": "2024-02-15",
+    "readTime": "8 min read",
+    "likes": 234,
+    "comments": 45,
+    "featured": true,
+    "image": "/assets/img/blog/blog1.jpg",
+    "category": "Crochet Basics"
+  },
+  {
+    "id": 2,
+    "title": "Choosing the Perfect Yarn: A Complete Guide",
+    "excerpt": "Understanding different yarn fibers will transform your projects and help you achieve the look and feel you desire. Learn about cotton, wool, acrylic, and blends, plus when to use each one...",
+    "date": "2024-02-10",
+    "readTime": "12 min read",
+    "likes": 189,
+    "comments": 32,
+    "featured": true,
+    "image": "/assets/img/blog/blog2.jpg",
+    "category": "Yarn & Materials"
+  },
+  {
+    "id": 3,
+    "title": "Fixing Common Crochet Mistakes: Don’t Panic",
+    "excerpt": "Before you unravel hours of work, try these simple techniques to fix common crochet mistakes and save your project. From dropped stitches to tension problems, here’s how to troubleshoot...",
+    "date": "2024-01-20",
+    "readTime": "7 min read",
+    "likes": 278,
+    "comments": 54,
+    "featured": true,
+    "image": "/assets/img/blog/blog3.jpg",
+    "category": "Crochet Tips"
+  },
+  {
+    "id": 4,
+    "title": "Abstract Crochet Patterns to Inspire Your Next Project",
+    "excerpt": "Discover bold color combinations and creative stitches with these modern crochet designs. Perfect for advanced beginners looking for something fresh and artistic...",
+    "date": "2024-01-20",
+    "readTime": "7 min read",
+    "likes": 278,
+    "comments": 54,
+    "featured": true,
+    "image": "/assets/img/blog/blog4.jpg",
+    "category": "Patterns & Design"
+  },
+  {
+    "id": 5,
+    "title": "Crochet for Relaxation: How Crafting Improves Mental Health",
+    "excerpt": "Studies show that repetitive crafting activities like crochet can reduce stress, improve focus, and even help with anxiety. Let’s explore how to make crochet part of your self-care routine...",
+    "date": "2024-02-05",
+    "readTime": "9 min read",
+    "likes": 312,
+    "comments": 61,
+    "featured": false,
+    "image": "/assets/img/blog/blog8.jpg",
+    "category": "Mental Health"
+  },
+  {
+    "id": 6,
+    "title": "Top 7 Crochet Fashion Trends in 2024",
+    "excerpt": "From oversized sweaters to colorful handbags, crochet is making waves in the fashion world. Here are the top trends you should try this year to keep your projects stylish and relevant...",
+    "date": "2024-02-12",
+    "readTime": "10 min read",
+    "likes": 420,
+    "comments": 73,
+    "featured": false,
+    "image": "/assets/img/blog/blog6.jpg",
+    "category": "Fashion & Trends"
+  },
+  {
+    "id": 7,
+    "title": "How to Read Crochet Patterns Like a Pro",
+    "excerpt": "Abbreviations, charts, and symbols can be intimidating at first, but with this guide you’ll learn how to confidently read crochet patterns and bring any design to life...",
+    "date": "2024-01-30",
+    "readTime": "11 min read",
+    "likes": 156,
+    "comments": 27,
+    "featured": false,
+    "image": "/assets/img/blog/blog9.jpg",
+    "category": "Crochet Tips"
+  },
+  {
+    "id": 8,
+    "title": "Eco-Friendly Crochet: Using Sustainable Yarns",
+    "excerpt": "Crocheting with organic cotton, bamboo, or recycled fibers not only benefits the environment but also gives your work a unique feel. Here’s a guide to choosing the best eco-friendly yarns...",
+    "date": "2024-02-08",
+    "readTime": "9 min read",
+    "likes": 198,
+    "comments": 41,
+    "featured": false,
+    "image": "/assets/img/blog/blog7.jpg",
+    "category": "Sustainability"
+  },
+  {
+    "id": 9,
+    "title": "Crochet Gift Ideas for Every Occasion",
+    "excerpt": "Whether it’s birthdays, holidays, or special events, crochet makes for meaningful handmade gifts. Discover simple yet thoughtful crochet projects you can make in no time...",
+    "date": "2024-02-18",
+    "readTime": "6 min read",
+    "likes": 241,
+    "comments": 33,
+    "featured": false,
+    "image": "/assets/img/blog/blog5.jpg",
+    "category": "Gift Ideas"
+  },
+  {
+    "id": 10,
+    "title": "The Evolution of Crochet Through History",
+    "excerpt": "From its origins in Europe to its global popularity today, crochet has evolved through centuries of culture and craft. Let’s take a journey through the history of crochet and its timeless appeal...",
+    "date": "2024-01-25",
+    "readTime": "14 min read",
+    "likes": 301,
+    "comments": 52,
+    "featured": false,
+    "image": "/assets/img/blog/blog10.jpg",
+    "category": "History"
+  }
+]

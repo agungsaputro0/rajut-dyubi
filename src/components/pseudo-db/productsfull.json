@@ -1,0 +1,152 @@
+[
+  {
+    "productID": "1",
+    "images": ["/assets/img/produk/dompet-rajut.jpg"],
+    "name": "Dompet Rajut Double Colour",
+    "price": 100000,
+    "discountPrice": 75000,
+    "rating": 4.5,
+    "reviews": 24,
+    "category": "Dompet"
+  },
+  {
+    "productID": "2",
+    "images": ["/assets/img/produk/double-cherry.jpg"],
+    "name": "Double Cherry Little Cat",
+    "price": 25000,
+    "discountPrice": 12500,
+    "rating": 4.8,
+    "reviews": 18,
+    "category": "Dompet"
+  },
+  {
+    "productID": "3",
+    "images": ["/assets/img/produk/hand-bag.jpg"],
+    "name": "Elegant Hand Bag",
+    "price": 300000,
+    "discountPrice": 200000,
+    "rating": 4.7,
+    "reviews": 32,
+    "category": "Tas"
+  },
+  {
+    "productID": "4",
+    "images": ["/assets/img/produk/product4.jpg"],
+    "name": "Tas 2 Fungsi Tali",
+    "price": 200000,
+    "discountPrice": 200000,
+    "rating": 4.0,
+    "reviews": 15,
+    "category": "Tas"
+  },
+  {
+    "productID": "5",
+    "images": ["/assets/img/produk/product5.jpg"],
+    "name": "Round Couple Pattern",
+    "price": 250000,
+    "discountPrice": 250000,
+    "rating": 4.6,
+    "reviews": 28,
+    "category": "Tas"
+  },
+  {
+    "productID": "6",
+    "images": ["/assets/img/produk/product6.jpg"],
+    "name": "Simple Flower Set",
+    "price": 300000,
+    "discountPrice": 300000,
+    "rating": 4.5,
+    "reviews": 21,
+    "category": "Set"
+  },
+  {
+    "productID": "7",
+    "images": ["/assets/img/produk/product7.jpg"],
+    "name": "Dompet Koin Strawberry",
+    "price": 25000,
+    "discountPrice": 25000,
+    "rating": 4.7,
+    "reviews": 32,
+    "category": "Dompet"
+  },
+  {
+    "productID": "8",
+    "images": ["/assets/img/produk/product8.jpg"],
+    "name": "Dompet 2 Saku",
+    "price": 50000,
+    "discountPrice": 50000,
+    "rating": 4.6,
+    "reviews": 24,
+    "category": "Dompet"
+  },
+  {
+    "productID": "9",
+    "images": ["/assets/img/produk/product9.jpg"],
+    "name": "Seragam 2 Warna",
+    "price": 150000,
+    "discountPrice": 125000,
+    "rating": 4.4,
+    "reviews": 18,
+    "category": "Tas"
+  },
+  {
+    "productID": "10",
+    "images": ["/assets/img/produk/product10.jpg"],
+    "name": "Dompet Mini Rajut",
+    "price": 20000,
+    "discountPrice": 20000,
+    "rating": 4.3,
+    "reviews": 12,
+    "category": "Dompet"
+  },
+  {
+    "productID": "11",
+    "images": ["/assets/img/produk/product11.jpg"],
+    "name": "Tas Sling Rajut",
+    "price": 180000,
+    "discountPrice": 150000,
+    "rating": 4.6,
+    "reviews": 20,
+    "category": "Tas"
+  },
+  {
+    "productID": "12",
+    "images": ["/assets/img/produk/product12.jpg"],
+    "name": "Dompet Lipat Rajut",
+    "price": 75000,
+    "discountPrice": 60000,
+    "rating": 4.5,
+    "reviews": 14,
+    "category": "Pouch"
+  },
+  {
+    "productID": "13",
+    "images": ["/assets/img/produk/product13.jpg"],
+    "name": "Set Dompet & Tas Mini",
+    "price": 280000,
+    "discountPrice": 250000,
+    "rating": 4.7,
+    "reviews": 19,
+    "category": "Set"
+  },
+  {
+    "productID": "14",
+    "images": ["/assets/img/produk/product14.jpg"],
+    "name": "Tas Ransel Rajut",
+    "price": 320000,
+    "discountPrice": 280000,
+    "rating": 4.8,
+    "reviews": 27,
+    "category": "Ransel"
+  },
+  {
+    "productID": "15",
+    "images": ["/assets/img/produk/product15.jpg"],
+    "name": "Dompet Kartu Rajut",
+    "price": 45000,
+    "discountPrice": 45000,
+    "rating": 4.4,
+    "reviews": 10,
+    "category": "Aksesoris"
+  }
+]

@@ -4,18 +4,21 @@ import HomeNavbar from '../organisms/HomeNavbar';
 import Sidebar from '../organisms/Sidebar';
 import { useAuth } from '../hooks/AuthContext';
 
+
 type AppShellProps = {
     children: React.ReactNode;
 }
 
 const HomeShell = (props: AppShellProps) => {
     const [expanded, setExpanded] = useState(false);
-    const { userName, loading } = useAuth();
+    const { userName, userAvatar, loading } = useAuth();
 
     return (
         <main>
-            <div className="flex flex-col bg-[url('/assets/img/bg-default-us.jpg')] bg-no-repeat bg-center bg-cover bg-fixed w-full min-h-screen overflow-y-auto">
-                <HomeNavbar userName={userName} />
+            <div className="flex flex-col bg-[url('/assets/img/bg-main-2.png')] bg-no-repeat bg-center bg-cover bg-fixed w-full min-h-screen overflow-y-auto">
+            {/* <div className="flex flex-col bg-gradient-to-tr from-[#0f172a] via-[#0f4c5c] to-[#1b6a4a] bg-no-repeat bg-center bg-cover bg-fixed w-full min-h-screen overflow-y-auto"> */}
+
+                <HomeNavbar userName={userName} userAvatar={userAvatar} expanded={expanded} />
     
                 {/* Menambahkan kondisi loading */}
                 {loading ? (
@@ -34,7 +37,7 @@ const HomeShell = (props: AppShellProps) => {
     
                         {/* Menambahkan class dinamis untuk konten */}
                         <div className={`flex-1 p-6 overflow-y-auto transition-all duration-300 ${expanded ? 'content-expanded' : 'content-collapsed'}`}>
-                            {props.children}
+                             {props.children}
                         </div>
                     </div>
                 )}
