@@ -10,8 +10,8 @@ const WhatDriveUs: React.FC = () => {
   // Data sekarang berupa ikon, angka, dan label
   const stats = [
     {   icon: <FaRegHeart />, 
-        title: "Passion & Love",
-        description: "Setiap produk dibuat dengan sentuhan presisi, passion, dan cinta."
+        title: "Bulk/Single Order",
+        description: "Menerima dan berpengalaman untuk pembuatan souvernir & produk seragam hingga 1000pcs/4bulan"
     },
     {   icon: <GiSewingString />, 
         title: "Premium Quality", 
@@ -64,10 +64,10 @@ const WhatDriveUs: React.FC = () => {
           The Future We're Weaving
         </h2>
        <p className="text-rajutGray max-w-xl mx-auto mb-6 text-[0.85em] sm:text-base">
-         As I continue to grow and evolve as an artist, my vision extends beyond just creating beautiful pieces. I dream of building a community where the art of crochet is celebrated, where traditions are preserved, and where every customer becomes part of our extended family.
+         Seiring dengan perjalanan saya sebagai seorang seniman, visi saya tidak hanya berhenti pada menciptakan karya-karya indah. Saya bermimpi membangun sebuah komunitas tempat seni rajut dirayakan, tradisi dijaga, dan setiap pelanggan menjadi bagian dari keluarga besar kami.
        </p>
        <p className="text-rajutGray max-w-xl mx-auto mb-6 text-[0.85em] sm:text-base">
-         From our humble beginnings in Lafenwa to reaching customers across Nigeria and beyond, every order is a step towards realizing this dream. Thank you for being part of our story, and I can't wait to create something beautiful just for you.
+         Dari awal yang sederhana di Boyolali hingga menjangkau pelanggan di seluruh negeri bahkan mancanegara, setiap pesanan adalah langkah menuju terwujudnya mimpi ini. Terima kasih telah menjadi bagian dari kisah kami, dan kami tak sabar untuk menciptakan sesuatu yang indah khusus untuk Anda.
        </p>
       </div>
     </div>

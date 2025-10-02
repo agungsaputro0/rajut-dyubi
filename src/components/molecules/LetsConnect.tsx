@@ -11,7 +11,7 @@ const LetsConnect: React.FC = () => {
           Let's Connect
         </h2>
         <p className="text-rajutGray max-w-2xl mx-auto mb-6 mt-6 text-[0.9em]">
-          I'd love to hear from you! Whether you have questions about our products, want to place a custom order, or just want to say hello.
+          Saya sangat senang mendengar dari Anda! Baik itu pertanyaan seputar produk kami, ingin memesan karya custom, atau sekadar menyapa.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
             <Button
