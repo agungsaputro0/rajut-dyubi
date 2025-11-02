@@ -32,8 +32,8 @@ const WhatDriveUs: React.FC = () => {
     <div className="w-full bg-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Judul */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-rajutBoldPink mb-2 font-dancingScript">
-          What Drive Us
+        <h2 className="text-3xl sm:text-4xl font-bold text-mainColor mb-2 font-dancingScript">
+          Strategi Kami
         </h2>
        <p className="text-rajutGray max-w-xl mx-auto mb-6 text-[0.85em] sm:text-base">
           Nilai produk kami ada pada keunikan desain, bahan berkualitas, dan produksi yang presisi
@@ -47,7 +47,7 @@ const WhatDriveUs: React.FC = () => {
                 className="w-full h-auto text-center shadow-lg rounded-xl transition-transform transform hover:scale-105 hover:shadow-xl"
                 style={{ borderRadius: "12px" }}
             >
-                <div className="w-20 h-20 justify-self-center rounded-full bg-rajutLighterPink flex items-center justify-center text-3xl sm:text-4xl text-rajutBoldPink shadow-md">
+                <div className="w-20 h-20 justify-self-center rounded-full bg-thirdColor flex items-center justify-center text-3xl sm:text-4xl text-mainColor shadow-md">
                     {item.icon}
                 </div>
                 <div className="text-rajutGray font-bold mt-4">{item.title}</div>
@@ -60,7 +60,7 @@ const WhatDriveUs: React.FC = () => {
     <div className="w-full bg-gradientJourney py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Judul */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-rajutBoldPink mb-2 font-dancingScript">
+        <h2 className="text-3xl sm:text-4xl font-bold text-mainColor mb-2 font-dancingScript">
           The Future We're Weaving
         </h2>
        <p className="text-rajutGray max-w-xl mx-auto mb-6 text-[0.85em] sm:text-base">

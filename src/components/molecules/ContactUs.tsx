@@ -14,8 +14,8 @@ const ContactUs: React.FC = () => {
         
         {/* Form kiri */}
         <div className={`${isMobile ? "mx-2" : ""}`}>
-          <h2 className="text-2xl sm:text-3xl font-bold text-rajutBoldPink mb-2 font-dancingScript">
-            Send us a Message
+          <h2 className="text-2xl sm:text-3xl font-bold text-mainColor mb-2 font-dancingScript">
+            Kirim pesan kepada kami
           </h2>
           <p className="text-rajutGray mb-6 text-sm sm:text-base">
             Silahkan isi data di bawah ini, kami akan menghubungi anda secepatnya setelah jam kerja dimulai
@@ -70,7 +70,7 @@ const ContactUs: React.FC = () => {
 
           <Button
             type="primary"
-            className="mt-4 w-full rounded-full bg-rajutBoldPink hover:bg-rajutPink border-none flex items-center justify-center gap-2"
+            className="mt-4 w-full rounded-full bg-mainColor hover:bg-mainColorHover border-none flex items-center justify-center gap-2"
           >
             Kirim Pesan
             <span className="text-lg"><LuSendHorizonal /></span>
@@ -78,12 +78,12 @@ const ContactUs: React.FC = () => {
 
           {/* Kontak pintasan */}
           <div className="mt-6 bg-rajutPeach p-4 rounded-lg">
-            <h3 className="text-rajutBoldPink font-semibold mb-2">Kontak Pintasan</h3>
+            <h3 className="text-mainColor font-semibold mb-2">Kontak Pintasan</h3>
             <div className="flex items-center gap-2 mb-1">
-              <FaPhoneAlt className="text-rajutBoldPink" /> 087666999212
+              <FaPhoneAlt className="text-mainColor" /> 087666999212
             </div>
             <div className="flex items-center gap-2 mb-2">
-              <FaEnvelope className="text-rajutBoldPink" /> rajut-dyubi@gmail.com
+              <FaEnvelope className="text-mainColor" /> rajut-dyubi@gmail.com
             </div>
             <p className="text-sm text-rajutGray mt-2">
               Untuk keperluan mendesak, silahkan untuk langsung dapat menelpon kami pada nomor di atas.
@@ -96,28 +96,28 @@ const ContactUs: React.FC = () => {
          <WorkshopLocation />
 
           <div>
-            <h3 className="text-rajutBoldPink font-semibold mb-2">Follow Us</h3>
+            <h3 className="text-mainColor font-semibold mb-2">Follow Us</h3>
             <p className="text-gray-500 text-sm mb-4">
               Stay connected with us on social media for the latest updates, behind-the-scenes content, and crochet inspiration.
             </p>
             <div className="flex flex-col gap-2">
               <a
                 href="#"
-                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50"
+                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-thirdColor"
               >
                 <span className="bg-gradient-to-tr from-pink-400 to-purple-400 p-1 rounded-full text-white"><FaInstagram /></span>
                 @rajutdyubi
               </a>
               <a
                 href="#"
-                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50"
+                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-thirdColor"
               >
                 <span className="bg-blue-600 p-1 rounded-full text-white"><FaFacebook/></span>
                 rajut dyubi
               </a>
               <a
                 href="#"
-                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50"
+                className="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm hover:bg-thirdColor"
               >
                 <span className="bg-green-500 p-1 rounded-full text-white"><FaWhatsapp /></span>
                 WhatsApp

@@ -25,5 +25,15 @@
     "discountPrice": 200000,
     "rating": 4.7,
     "reviews": 32
+  },
+  {
+    "productID": "4",
+    "images": ["/assets/img/produk/product4.jpg"],
+    "name": "Tas 2 Fungsi Tali",
+    "price": 200000,
+    "discountPrice": 200000,
+    "rating": 4.0,
+    "reviews": 15,
+    "category": "Tas"
   }
 ]

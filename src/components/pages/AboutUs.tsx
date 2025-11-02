@@ -3,7 +3,6 @@ import AuthShell from "../shell/AuthShell";
 import AboutUsContent from "../molecules/AboutUsContent";
 import OurJourneyInNumber from "../molecules/OurJourneyInNumber";
 import WhatDriveUs from "../molecules/WhatDriveUs";
-import LetsConnect from "../molecules/LetsConnect";
 
 const AboutUs = () => {
     return (
@@ -12,7 +11,6 @@ const AboutUs = () => {
                 <AboutUsContent />
                 <OurJourneyInNumber />
                 <WhatDriveUs />
-                <LetsConnect />
             </LoginTemplate>
         </AuthShell>
     )

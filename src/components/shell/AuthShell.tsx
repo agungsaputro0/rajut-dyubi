@@ -12,7 +12,7 @@ const AuthShell = (props: AppShellProps) => {
     return (
         <main className="flex flex-col min-h-screen-default">
             <Navbar />
-            <div className="flex-grow bg-[url('/assets/img/bg-rajut.png')] bg-no-repeat bg-center bg-cover bg-fixed">
+            <div className="flex-grow bg-[linear-gradient(135deg,_#fbcfe8,_#a5f3fc,_#c7d2fe)] bg-no-repeat bg-center bg-cover bg-fixed">
                 {children}
             </div>
             <Footer />

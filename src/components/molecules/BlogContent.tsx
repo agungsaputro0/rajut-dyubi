@@ -6,12 +6,12 @@ const BlogContent = () => {
 
       {/* Konten Kiri */}
       <div className="flex items-center justify-center w-full px-6 sm:px-12 lg:px-16 z-10">
-        <div className="max-w-lg text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-rajutBoldPink leading-tight drop-shadow-lg font-light">
-            Crochet Chronicles
+        <div className="max-w-3xl text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-mainColor leading-tight drop-shadow-lg font-bold">
+            Blog Benang
           </h1>
-          <p className="mt-4 text-sm sm:text-md text-rajutGray text-center drop-shadow-md font-light">
-            Tips, tutorials, stories, and inspiration from the world of crochet. Join our community of makers and learn something new every week!
+          <p className="mt-4 text-lg sm:text-lg text-rajutGray text-center drop-shadow-md font-light">
+            Temukan tips, panduan, dan kisah penuh inspirasi dari dunia rajutan. Jadilah bagian dari komunitas perajut kami — belajar, berbagi, dan menenun keindahan bersama setiap minggu.
           </p>
         </div>
       </div>

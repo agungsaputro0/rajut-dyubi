@@ -11,8 +11,23 @@ const config: Config = {
       minHeight: {
         'screen-default': 'calc(100vh - 4rem)',
         'screen-half': 'calc(60vh - 4rem)',
+        'screenNoNavbar': 'calc(100dvh - 64px)',
+      },
+      height: {
+        'screenNoNavbar': 'calc(100dvh - 64px)',
+      },
+      screens: {
+        'smweb' : "772px",
+        'brokennav' : "864px",
+        'medweb' : "1122px",
       },
       colors: {
+        mainColor: "#323483",
+        mainColorHover: "#1b1c4eff",
+        secondColor: "#7A83D6", 
+        secondColorBolder: "#9ea6f3ff", 
+        thirdColor: "#c5cbfcff", 
+        fourthColor: "#e7e9fcff", 
         rajutLitepink: "#fffefd",
         rajutLighterPink: "#ffd9e3ff",
         rajutPink: "#f03a6a",
@@ -58,7 +73,9 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        gradientJourney: "linear-gradient(to bottom, #F8E5E5, #F5C2C7)", 
+        gradientJourney: "linear-gradient(to bottom, #fdf5ef, #c5cbfcff)", 
+        gradientJourneyHorizontal: "linear-gradient(to right, #7A83D6, #c5cbfcff)", 
+        gradientJourneyReverse: "linear-gradient(to bottom, #c5cbfcff, #fdf5ef)", 
         gradientJourneyInNumber: "linear-gradient(to bottom, #FFFFFF, #F5C2C7)", 
       }
     },

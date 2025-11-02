@@ -9,14 +9,14 @@ import useIsMobile from '../hooks/UseIsMobile';
 const Footer: React.FC = () => {
   const isMobile = useIsMobile();
   return (
-<footer className={`mt-auto footer bg-kemenkeuyellowsoft text-white ${isMobile ? "pb-10" : ""}`}>
-  <div className="bg-rajutBoldPink py-2 text-center">
+<footer className={`mt-auto footer bg-fourthColor text-white ${isMobile ? "pb-10" : ""}`}>
+  <div className="bg-mainColor py-2 text-center">
     <ul className="flex justify-center space-x-6 text-sm text-white mr-[10px] ml-[10px]">
     {/* <ul className="flex justify-center space-x-6 text-sm text-white sm:space-x-4 sm:flex-col xs:items-center"> */}
-      <li><a href="#" className="hover:text-rajutBoldPeach">Peta Situs</a></li>
-      <li><a href="#" className="hover:text-rajutBoldPeach">Hubungi Kami</a></li>
-      <li><a href="#" className="hover:text-rajutBoldPeach">Kebijakan Privasi</a></li>
-      <li><a href="#" className="hover:text-rajutBoldPeach">Syarat dan Ketentuan</a></li>
+      <li><a href="#" className="hover:text-secondColor">Peta Situs</a></li>
+      <li><a href="#" className="hover:text-secondColor">Hubungi Kami</a></li>
+      <li><a href="#" className="hover:text-secondColor">Kebijakan Privasi</a></li>
+      <li><a href="#" className="hover:text-secondColor">Syarat dan Ketentuan</a></li>
     </ul>
   </div>
 
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <FooterInfo />
     </div>
     <div className="footer-right text-rajutGray sm:footer-left mb-8 mt-4 lg:mt-0 ml-7 text-left lg:text-left md:text-left mt-[2px]">
-      <h4 className="text-rajutBoldPink"><b>Contact Us</b></h4>
+      <h4 className="text-mainColor"><b>Contact Us</b></h4>
       <p className="mt-1"><MailOutlined /> &nbsp;<b>Email</b></p>
       <p><MailOutlined className="text-transparent md:hidden sm:contents lg:contents" /> &nbsp;rajut-dyubi@gmail.com</p>
       {/* Fax (React FA) */}
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
       <p className="pl-6 cursor-pointer">087-666-999-212</p>
     </div>
     <div className="footer-right mb-8 mt-4 lg:mt-0 md:mr-10 sm:mr-5 ml-7 mt-[2px]">
-      <h4 className="mb-2 text-rajutBoldPink"><b>Follow Us</b></h4>
+      <h4 className="mb-2 text-mainColor"><b>Follow Us</b></h4>
       <SocialIcon />
     </div>
   </div>

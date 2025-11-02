@@ -1,15 +1,20 @@
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { UseScroll } from '../hooks/UseScroll';
 import { Link, useLocation } from 'react-router-dom';
+import useIsMobile from '../hooks/UseIsMobile';
+import UseSizeSpecific from '../hooks/UseSizeSpecific';
+import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 
-const navigation = [
-  { name: 'Home', to: '/Welcome' },
-  { name: 'About', to: '/About-us' },
+const mainNav = [
+  { name: 'Beranda', to: '/Welcome' },
+  { name: 'Tentang', to: '/About-us' },
   { name: 'Katalog', to: '/Katalog' },
   { name: 'Blog', to: '/Blog' },
   { name: 'Kontak', to: '/Contact' },
-  { name: 'Login', to: '/Login' },
+];
+
+const rightNav = [
+  { name: 'Login', to: '/Login', variant: 'outline' },
 ];
 
 function classNames(...classes: string[]): string {
@@ -18,67 +23,61 @@ function classNames(...classes: string[]): string {
 
 const Navbar = () => {
   const isScrolled = UseScroll();
-  const location = useLocation(); // cek path aktif
-
+  const location = useLocation();
+  const isMobile = useIsMobile();
+  const isSpecific = UseSizeSpecific();
   return (
     <Disclosure
       as="nav"
-      className={`${
-        isScrolled ? 'bg-rajutBoldPeach/50' : 'bg-rajutLitepink'
-      } transition duration-300 w-full fixed z-50`}
+      className={`fixed w-full py-1 z-50 transition duration-500 ${
+        isScrolled
+          ? 'backdrop-blur-xl bg-footeruplist/30 border-b border-white/20 shadow-md'
+          : 'backdrop-blur-lg bg-footeruplist/20'
+      }`}
     >
-      {({ open }) => (
+      {() => (
         <>
-          <div className="mx-auto min-w-screen px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              {/* Mobile button */}
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-
-              {/* Logo */}
-              <div className="flex items-center">
-                <Link to="/" className="flex items-center mt-[-3px] space-x-2">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              className={`relative flex h-16 items-center ${
+                isMobile ? 'justify-center' : 'justify-between'
+              }`}
+            >
+              {/* LOGO */}
+             <Link to="/" className="flex items-center mt-[-3px] space-x-2">
                   <img
-                    src="/assets/img/rajut-dyubi-icon.png"
+                    src="/assets/img/rajut-dyubi-icon-purple.png"
                     alt="Rajut Dyubi Logo"
                     className="h-10 w-15"
                   />
-                  <div className="flex flex-col leading-tight text-rajutPink">
-                    <span className="text-[1.4em] font-dancingScript font-bold">
+                  <div className="flex font-spring flex-col leading-tight text-mainColor">
+                    <span className="text-[1.4em]  font-dancingScript font-bold">
                       Rajut Dyubi
                     </span>
                     <small className="text-[0.7em]">
-                      Handmade With Love
+                       Dirajut dengan penuh cinta
                     </small>
                   </div>
-                </Link>
-              </div>
+               </Link>
 
-              {/* Navigation desktop */}
-              <div className="hidden sm:flex ml-auto">
-                <div className="flex space-x-6">
-                  {navigation.map((item) => {
-                    const isActive = location.pathname.toLowerCase() === item.to.toLowerCase();
+              {/* MAIN NAV CENTER */}
+              <div className="hidden smweb:flex absolute left-1/2 -translate-x-1/2">
+                <div className="flex items-center gap-4 px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-inner">
+                  {mainNav.map((item) => {
+                    const isActive =
+                      location.pathname.toLowerCase() ===
+                      item.to.toLowerCase();
+
                     return (
                       <Link
                         key={item.name}
                         to={item.to}
                         className={classNames(
+                          'relative px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-300',
                           isActive
-                            ? 'text-rajutPink border-b-2 border-rajutPink decoration-2'
-                            : isScrolled
-                              ? 'text-white'
-                              : 'text-gray-500 hover:text-rajutPink',
-                          'px-3 py-1 text-[0.85em] font-medium transition'
+                            ? 'bg-gradient-to-r from-mainColor to-secondColor text-white shadow-md'
+                            : 'text-gray-700 hover:text-appPink hover:bg-appPink/10'
                         )}
-
                       >
                         {item.name}
                       </Link>
@@ -86,21 +85,72 @@ const Navbar = () => {
                   })}
                 </div>
               </div>
+
+              {/* RIGHT NAV */}
+              <div className="hidden smweb:flex items-center justify-between gap-4">
+              {/* 🔍 Ikon kiri (Search + Cart) */}
+              {!isSpecific && (
+                <div className="flex items-center gap-3">
+                  {/* Search */}
+                  <button className="p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
+                    <FaSearch className="text-gray-700 text-lg" />
+                  </button>
+
+                  {/* Cart */}
+                  <button className="relative p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
+                    <FaShoppingCart className="text-gray-700 text-lg" />
+                    {/* Notifikasi jumlah item */}
+                    {/* <span className="absolute -top-1.5 -right-1.5 bg-rajutBoldPink text-white text-[10px] font-semibold rounded-full px-1.5 py-0.5">
+                      2
+                    </span> */}
+                  </button>
+                </div>
+              )}
+
+      {/* 🌸 Menu Navigasi */}
+      <div className="flex items-center px-2 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-inner">
+        {rightNav.map((item) => {
+          const isActive =
+            location.pathname.toLowerCase() === item.to.toLowerCase();
+          const baseStyle =
+            "relative w-[140px] text-center px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-300";
+
+          return (
+            <Link
+              key={item.name}
+              to={item.to}
+              className={classNames(
+                baseStyle,
+                isActive ? "text-white" : "text-gray-700",
+                isActive && item.variant === "outline"
+                  ? "border-white bg-white/10 bg-gradient-to-r from-mainColor to-secondColor"
+                  : "",
+                isActive && item.variant === "filled" ? "brightness-110" : ""
+              )}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+
             </div>
           </div>
 
-          {/* Mobile menu */}
+          {/* MOBILE MENU */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => {
-                const isActive = location.pathname === item.to;
+              {[...mainNav, ...rightNav].map((item) => {
+                const isActive =
+                  location.pathname.toLowerCase() === item.to.toLowerCase();
                 return (
                   <Link key={item.name} to={item.to}>
                     <Disclosure.Button
                       className={classNames(
                         isActive
-                          ? 'text-rajutPink underline underline-offset-4 decoration-2'
-                          : 'text-gray-500 hover:text-rajutPink',
+                          ? 'text-appPink underline underline-offset-4 decoration-2'
+                          : 'text-gray-300 hover:text-white',
                         'block rounded-md px-3 py-2 text-base font-medium'
                       )}
                     >

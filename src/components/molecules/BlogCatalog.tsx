@@ -13,7 +13,7 @@ const BlogCatalog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState(""); // "" = All
-  const pageSize = 6;
+  const pageSize = 8;
 
   // Filter by search & category
   const filteredBlogs = blogsData.filter((b) =>
@@ -38,20 +38,20 @@ const BlogCatalog: React.FC = () => {
   const categories = Array.from(new Set(blogsData.map((b) => b.category)));
 
   return (
-    <div className="w-full bg-gradientJourneyInNumber py-12">
+    <div className="w-full bg-gradientJourney py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Filter Section */}
-        <div className="bg-rajutPeach border rounded-lg p-4 grid grid-cols-1 sm:flex sm:flex-row sm:items-center sm:justify-between gap-3 mb-8 shadow-sm">
+        <div className="bg-gradientJourneyHorizontal border rounded-lg p-4 grid grid-cols-1 sm:flex sm:flex-row sm:items-center sm:justify-between gap-3 mb-8 shadow-sm">
           {/* Search */}
           <input
             type="text"
-            placeholder="Search blog posts..."
+            placeholder="Cari Postingan Blog..."
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full sm:w-60 px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-rajutBoldPink"
+            className="w-full sm:w-60 px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mainColor"
           />
 
           {/* Category Filter */}
@@ -62,10 +62,10 @@ const BlogCatalog: React.FC = () => {
                 setCurrentPage(1);
             }}
             className="w-full sm:w-60"
-            placeholder="All Categories"
+            placeholder="Semua Kategori"
             allowClear
             >
-            <Option value="">All</Option> {/* opsi All */}
+            <Option value="">Semua Kategori</Option> {/* opsi All */}
             {categories.map((cat) => (
                 <Option key={cat} value={cat}>{cat}</Option>
             ))}
@@ -77,9 +77,9 @@ const BlogCatalog: React.FC = () => {
             onChange={(value) => setSortBy(value)}
             className="w-full sm:w-60"
           >
-            <Option value="latest">Latest</Option>
-            <Option value="likes">Most Liked</Option>
-            <Option value="comments">Most Commented</Option>
+            <Option value="latest">Terakhir</Option>
+            <Option value="likes">Paling banyak disukai</Option>
+            <Option value="comments">Paling banyak komentar</Option>
           </Select>
 
           {/* Toggle Grid/List */}
@@ -88,7 +88,7 @@ const BlogCatalog: React.FC = () => {
               onClick={() => setView("grid")}
               className={`p-2 rounded-md border ${
                 view === "grid"
-                  ? "bg-rajutBoldPink text-white"
+                  ? "bg-mainColor text-white"
                   : "bg-white hover:bg-gray-100"
               }`}
             >
@@ -98,7 +98,7 @@ const BlogCatalog: React.FC = () => {
               onClick={() => setView("list")}
               className={`p-2 rounded-md border ${
                 view === "list"
-                  ? "bg-rajutBoldPink text-white"
+                  ? "bg-mainColor text-white"
                   : "bg-white hover:bg-gray-100"
               }`}
             >
@@ -122,7 +122,7 @@ const BlogCatalog: React.FC = () => {
 
         {/* Blogs */}
         {view === "grid" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
             {paginatedBlogs.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}

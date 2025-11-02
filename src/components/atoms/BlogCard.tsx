@@ -38,7 +38,7 @@ const BlogCard = ({ blog }: { blog: BlogProps }) => {
 
     {/* Category badge untuk layar sm ke atas */}
     {category && (
-      <span className="hidden sm:inline absolute top-3 right-3 bg-rajutBoldPink/50 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+      <span className="hidden sm:inline absolute top-3 right-3 bg-mainColor/50 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
         {category}
       </span>
     )}
@@ -48,7 +48,7 @@ const BlogCard = ({ blog }: { blog: BlogProps }) => {
   <div className="p-4 text-left flex flex-col gap-2">
     {/* Untuk mobile, tampilkan category di bawah judul */}
     {category && (
-      <span className="sm:hidden inline-block bg-rajutBoldPink/50 text-white text-xs font-semibold px-3 py-1 rounded-full shadow mb-1 max-w-max">
+      <span className="sm:hidden inline-block bg-mainColor/50 text-white text-xs font-semibold px-3 py-1 rounded-full shadow mb-1 max-w-max">
         {category}
       </span>
     )}

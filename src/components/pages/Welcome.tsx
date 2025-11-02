@@ -12,9 +12,9 @@ const Welcome = () => {
                     <title>{appName}</title>
                 </Helmet>
                 <LandingLayouts 
-                    layoutTitle="Handcrafted"  
-                    layoutSubtitle="with Love"
-                    layoutMessage="Selamat datang di Rajut Dyubi, UMKM kreatif yang menghadirkan berbagai produk rajut handmade dengan desain estetik, fungsional, dan penuh makna. Setiap produk dibuat dengan detail dan cinta, sehingga memiliki karakter unik dan berbeda dari rajutan massal"  
+                    layoutTitle="Dirajut dengan penuh cinta"  
+                    layoutSubtitle=""
+                    layoutMessage="Rajut Dyubi menghadirkan koleksi rajut handmade dengan desain estetik dan fungsional, dirancang penuh ketelitian agar setiap produk memiliki cerita dan karakter tersendiri."  
                 />
             </div>
         </AppShell>

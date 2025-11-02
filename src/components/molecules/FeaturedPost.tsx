@@ -10,8 +10,8 @@ const FeaturedPosts: React.FC = () => {
     <div className="w-full bg-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Judul */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-rajutBoldPink mb-2 font-dancingScript">
-          Featured Posts
+        <h2 className="text-3xl sm:text-4xl font-bold text-mainColor mb-2 font-dancingScript">
+          Postingan Unggulan
         </h2>
         <p className="text-rajutGray max-w-2xl mx-auto mb-10 text-sm">
           Artikel pilihan dari dunia rajut. Baca inspirasi, tips, dan kisah 
@@ -19,7 +19,7 @@ const FeaturedPosts: React.FC = () => {
         </p>
 
         {/* Blog Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {featuredPosts.map((post) => (
             <BlogCard key={post.id} blog={post} />
           ))}
@@ -27,8 +27,8 @@ const FeaturedPosts: React.FC = () => {
 
         {/* Tombol View All */}
         <div className="mt-10">
-          <button className="bg-white border border-rajutBoldPink text-rajutBoldPink px-6 py-2 rounded-full font-semibold shadow-md hover:bg-rajutBoldPink hover:text-white transition duration-200">
-            View All Posts →
+          <button className="bg-white border border-mainColor text-mainColor px-6 py-2 rounded-full font-semibold shadow-md hover:bg-mainColor hover:text-white transition duration-200">
+            Lihat semua postingan →
           </button>
         </div>
       </div>

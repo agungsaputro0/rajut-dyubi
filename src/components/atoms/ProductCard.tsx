@@ -20,7 +20,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
       : "assets/img/produk/dummy.jpg";
 
   return (
-    <div className="bg-white rounded-xl shadow-md w-full sm:w-72 lg:w-80 relative mb-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+    <div className="bg-white rounded-xl shadow-md w-full sm:min-w-60 lg:min-w-60 max-w-72 relative mb-6 transition-transform transform hover:scale-105 hover:shadow-lg">
       {/* Gambar */}
       <img
         src={image}
@@ -46,7 +46,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         <div
           className={`mt-2 gap-2 ${!isMobile ? "flex items-center" : ""}`}
         >
-          <p className="text-md sm:text-lg font-bold text-rajutBoldPink">
+          <p className="text-md sm:text-lg font-bold text-mainColor">
             Rp {discountPrice?.toLocaleString("id-ID") || price.toLocaleString("id-ID")}
           </p>
           {discountPrice && (
@@ -57,7 +57,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         </div>
 
         {/* Tombol Pesan */}
-        <button className="mt-3 w-full bg-rajutBoldPink rounded-full text-white text-sm sm:text-md font-semibold py-2 hover:bg-rajutPink transition">
+        <button className="mt-3 w-full bg-mainColor rounded-full text-white text-sm sm:text-md font-semibold py-2 hover:bg-mainColorHover transition">
           Pesan
         </button>
       </div>

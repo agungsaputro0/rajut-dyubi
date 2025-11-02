@@ -4,15 +4,15 @@ const Logo: React.FC = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img
-        src="/assets/img/rajut-dyubi-icon.png" 
+        src="/assets/img/rajut-dyubi-icon-purple.png" 
         alt="Logo Rajut Dyubi"
         width={80}
         height={80}
         className="ml-2"
       />
-      <div className="font-dancingScript" style={{ marginLeft: '15px' }}>
-        <h3><b><span className="text-rajutBoldPink  text-[1.2em]">Rajut Dyubi</span></b></h3>
-        <h5 className="text-rajutPink text-[0.9em]"> Handmade With Love</h5>
+      <div style={{ marginLeft: '15px' }}>
+        <h3><b><span className="text-mainColor font-dancingScript text-[1.3em]">Rajut Dyubi</span></b></h3>
+        <h5 className="text-mainColorHover text-[0.8em]">Dirajut dengan penuh cinta</h5>
       </div>
     </div>
   );

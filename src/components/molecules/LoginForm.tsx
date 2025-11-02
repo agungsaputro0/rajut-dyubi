@@ -131,13 +131,13 @@ const LoginForm: FC = () => {
           </p>
           <Button
             type="submit"
-            variant="bg-rajutBoldPink w-full min-h-10 hover:bg-rajutPink"
+            variant="bg-mainColor w-full min-h-10 hover:bg-secondColor"
             message="Login"
             disabled={loading}
           />
         </form>
         <p className="text-rajutGray mt-4 text-center">Belum memiliki Akun ? Silakan&nbsp;
-          <Link to="#" className="text-rajutPink">
+          <Link to="#" className="text-secondColor">
             <b>Klik Disini</b>
           </Link>
         </p>
@@ -154,7 +154,7 @@ const LoginForm: FC = () => {
       {/* Bagian Gambar */}
       <div className="w-full md:w-1/2 mt-4 md:mt-0">
         <img
-          src="/assets/img/login-illustration.png"
+          src="/assets/img/login-illustration-purple.png"
           alt="Login illustration"
           className="w-full h-full object-cover rounded-lg"
         />

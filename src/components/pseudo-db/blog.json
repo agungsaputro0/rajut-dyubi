@@ -1,122 +1,122 @@
 [
   {
     "id": 1,
-    "title": "10 Essential Crochet Stitches Every Beginner Must Know",
-    "excerpt": "Master these fundamental stitches to unlock endless creative possibilities in your crochet projects. From single crochet to slip stitch, these basics are the foundation of every piece you’ll make...",
+    "title": "10 Jenis Tusuk Rajut Dasar yang Wajib Dikuasai Pemula",
+    "excerpt": "Kuasai teknik dasar ini untuk membuka peluang tak terbatas dalam dunia rajut. Dari tusuk tunggal hingga tusuk slip, inilah fondasi setiap karya yang akan kamu ciptakan...",
     "date": "2024-02-15",
-    "readTime": "8 min read",
+    "readTime": "8 menit baca",
     "likes": 234,
     "comments": 45,
     "featured": true,
     "image": "/assets/img/blog/blog1.jpg",
-    "category": "Crochet Basics"
+    "category": "Dasar Rajut"
   },
   {
     "id": 2,
-    "title": "Choosing the Perfect Yarn: A Complete Guide",
-    "excerpt": "Understanding different yarn fibers will transform your projects and help you achieve the look and feel you desire. Learn about cotton, wool, acrylic, and blends, plus when to use each one...",
+    "title": "Panduan Lengkap Memilih Benang Rajut yang Tepat",
+    "excerpt": "Memahami jenis serat benang akan membantu kamu menciptakan hasil rajutan yang sesuai dengan tekstur dan tampilan yang diinginkan. Pelajari tentang katun, wol, akrilik, dan campurannya—serta kapan sebaiknya digunakan...",
     "date": "2024-02-10",
-    "readTime": "12 min read",
+    "readTime": "12 menit baca",
     "likes": 189,
     "comments": 32,
     "featured": true,
     "image": "/assets/img/blog/blog2.jpg",
-    "category": "Yarn & Materials"
+    "category": "Benang & Bahan"
   },
   {
     "id": 3,
-    "title": "Fixing Common Crochet Mistakes: Don’t Panic",
-    "excerpt": "Before you unravel hours of work, try these simple techniques to fix common crochet mistakes and save your project. From dropped stitches to tension problems, here’s how to troubleshoot...",
+    "title": "Mengatasi Kesalahan Umum Saat Merajut — Jangan Panik!",
+    "excerpt": "Sebelum kamu membongkar hasil rajutan berjam-jam, coba dulu teknik sederhana ini untuk memperbaiki kesalahan umum. Dari tusuk yang lepas hingga ketegangan benang, begini cara menyelamatkan karyamu...",
     "date": "2024-01-20",
-    "readTime": "7 min read",
+    "readTime": "7 menit baca",
     "likes": 278,
     "comments": 54,
     "featured": true,
     "image": "/assets/img/blog/blog3.jpg",
-    "category": "Crochet Tips"
+    "category": "Tips Rajut"
   },
   {
     "id": 4,
-    "title": "Abstract Crochet Patterns to Inspire Your Next Project",
-    "excerpt": "Discover bold color combinations and creative stitches with these modern crochet designs. Perfect for advanced beginners looking for something fresh and artistic...",
+    "title": "Inspirasi Pola Rajut Abstrak untuk Proyek Berikutnya",
+    "excerpt": "Temukan kombinasi warna berani dan pola kreatif melalui desain rajut modern ini. Cocok bagi perajut tingkat menengah yang ingin mencoba sesuatu yang segar dan artistik...",
     "date": "2024-01-20",
-    "readTime": "7 min read",
+    "readTime": "7 menit baca",
     "likes": 278,
     "comments": 54,
     "featured": true,
     "image": "/assets/img/blog/blog4.jpg",
-    "category": "Patterns & Design"
+    "category": "Pola & Desain"
   },
   {
     "id": 5,
-    "title": "Crochet for Relaxation: How Crafting Improves Mental Health",
-    "excerpt": "Studies show that repetitive crafting activities like crochet can reduce stress, improve focus, and even help with anxiety. Let’s explore how to make crochet part of your self-care routine...",
+    "title": "Rajut untuk Relaksasi: Bagaimana Merajut Bisa Menenangkan Pikiran",
+    "excerpt": "Penelitian menunjukkan bahwa aktivitas seperti merajut dapat mengurangi stres, meningkatkan fokus, dan membantu mengatasi kecemasan. Mari jelajahi bagaimana merajut bisa menjadi bagian dari rutinitas perawatan diri kamu...",
     "date": "2024-02-05",
-    "readTime": "9 min read",
+    "readTime": "9 menit baca",
     "likes": 312,
     "comments": 61,
     "featured": false,
     "image": "/assets/img/blog/blog8.jpg",
-    "category": "Mental Health"
+    "category": "Kesehatan Mental"
   },
   {
     "id": 6,
-    "title": "Top 7 Crochet Fashion Trends in 2024",
-    "excerpt": "From oversized sweaters to colorful handbags, crochet is making waves in the fashion world. Here are the top trends you should try this year to keep your projects stylish and relevant...",
+    "title": "7 Tren Fashion Rajut Terpopuler di Tahun 2024",
+    "excerpt": "Dari sweater oversized hingga tas berwarna cerah, dunia fashion sedang jatuh cinta lagi pada rajutan. Simak tren rajut paling stylish dan kekinian yang wajib kamu coba tahun ini...",
     "date": "2024-02-12",
-    "readTime": "10 min read",
+    "readTime": "10 menit baca",
     "likes": 420,
     "comments": 73,
     "featured": false,
     "image": "/assets/img/blog/blog6.jpg",
-    "category": "Fashion & Trends"
+    "category": "Mode & Tren"
   },
   {
     "id": 7,
-    "title": "How to Read Crochet Patterns Like a Pro",
-    "excerpt": "Abbreviations, charts, and symbols can be intimidating at first, but with this guide you’ll learn how to confidently read crochet patterns and bring any design to life...",
+    "title": "Cara Membaca Pola Rajut Seperti Seorang Ahli",
+    "excerpt": "Singkatan, diagram, dan simbol mungkin tampak rumit di awal, tapi panduan ini akan membantumu memahami pola rajut dengan percaya diri dan mewujudkan setiap desain dengan mudah...",
     "date": "2024-01-30",
-    "readTime": "11 min read",
+    "readTime": "11 menit baca",
     "likes": 156,
     "comments": 27,
     "featured": false,
     "image": "/assets/img/blog/blog9.jpg",
-    "category": "Crochet Tips"
+    "category": "Tips Rajut"
   },
   {
     "id": 8,
-    "title": "Eco-Friendly Crochet: Using Sustainable Yarns",
-    "excerpt": "Crocheting with organic cotton, bamboo, or recycled fibers not only benefits the environment but also gives your work a unique feel. Here’s a guide to choosing the best eco-friendly yarns...",
+    "title": "Rajut Ramah Lingkungan: Menggunakan Benang Berkelanjutan",
+    "excerpt": "Merajut dengan katun organik, bambu, atau serat daur ulang tak hanya ramah lingkungan, tapi juga memberikan karakter unik pada hasil karyamu. Yuk, kenali cara memilih benang ramah lingkungan terbaik...",
     "date": "2024-02-08",
-    "readTime": "9 min read",
+    "readTime": "9 menit baca",
     "likes": 198,
     "comments": 41,
     "featured": false,
     "image": "/assets/img/blog/blog7.jpg",
-    "category": "Sustainability"
+    "category": "Keberlanjutan"
   },
   {
     "id": 9,
-    "title": "Crochet Gift Ideas for Every Occasion",
-    "excerpt": "Whether it’s birthdays, holidays, or special events, crochet makes for meaningful handmade gifts. Discover simple yet thoughtful crochet projects you can make in no time...",
+    "title": "Ide Hadiah Rajut untuk Setiap Kesempatan",
+    "excerpt": "Baik untuk ulang tahun, hari raya, atau momen spesial lainnya, rajutan selalu menjadi hadiah bermakna yang dibuat dengan hati. Temukan berbagai ide proyek rajut yang mudah dan penuh makna...",
     "date": "2024-02-18",
-    "readTime": "6 min read",
+    "readTime": "6 menit baca",
     "likes": 241,
     "comments": 33,
     "featured": false,
     "image": "/assets/img/blog/blog5.jpg",
-    "category": "Gift Ideas"
+    "category": "Ide Hadiah"
   },
   {
     "id": 10,
-    "title": "The Evolution of Crochet Through History",
-    "excerpt": "From its origins in Europe to its global popularity today, crochet has evolved through centuries of culture and craft. Let’s take a journey through the history of crochet and its timeless appeal...",
+    "title": "Perjalanan Panjang Rajut dalam Sejarah",
+    "excerpt": "Dari awal kemunculannya di Eropa hingga popularitasnya di seluruh dunia, seni rajut telah berevolusi seiring budaya dan waktu. Mari menelusuri sejarah panjang rajutan dan daya tarik abadi di baliknya...",
     "date": "2024-01-25",
-    "readTime": "14 min read",
+    "readTime": "14 menit baca",
     "likes": 301,
     "comments": 52,
     "featured": false,
     "image": "/assets/img/blog/blog10.jpg",
-    "category": "History"
+    "category": "Sejarah"
   }
 ]

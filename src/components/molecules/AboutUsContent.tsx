@@ -1,60 +1,104 @@
-import { TfiLocationPin } from 'react-icons/tfi';
-import { HiOutlineSparkles } from 'react-icons/hi';
-import useIsMobile from '../hooks/UseIsMobile';
-import { FaRegHeart } from 'react-icons/fa';
+import useIsMobile from "../hooks/UseIsMobile";
+import MeetRajutDyubi from "../atoms/MeetRajutDyubi";
+import { TbNeedleThread } from "react-icons/tb";
+import { TfiLocationPin } from "react-icons/tfi";
+
 
 
 const AboutUsContent = () => {
   const isMobile = useIsMobile();
- 
+
 
   return (
-    <div className="min-h-screen-default mt-16 w-full py-10 flex flex-col lg:flex-row relative bg-cover bg-center">
-      {/* Overlay hitam transparan */}
-      <div className="absolute inset-0 bg-black/10 z-0"></div>
+    <>
+      {/* ====== Jika MOBILE: tampilan banner atas dan konten di bawah ====== */}
+      {isMobile ? (
+        <div>
+            {/* Banner full */}
+           <div className="flex flex-col w-full mt-16">
+            {/* Banner penuh */}
+            <div
+              className="relative w-full h-[84dvh] bg-cover bg-center"
+              style={{ backgroundImage: "url('/assets/img/about-image-flip.webp')" }}
+            >
+              {/* Gradasi lembut di bawah agar transisi halus ke putih */}
+              <div className="absolute bottom-0 w-full h-80 bg-gradient-to-t from-white via-white to-transparent"></div>
+            </div>
 
-      {/* Konten Kiri */}
-      <div className="flex items-center justify-center w-full lg:w-1/2 px-6 sm:px-12 lg:px-16 z-10 order-1 lg:order-none">
-        <div className="max-w-lg text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-rajutBoldPink leading-tight drop-shadow-lg font-light">
-            Meet Rajut Dyubi
-          </h1>
-          <p className="mt-4 text-sm sm:text-md text-rajutGray text-justify lg:text-justify drop-shadow-md font-light">
-            Halo, berikut ini adalah produk trademark dari kami untuk bulan ini, flying bag over the river,
-            dibuat dengan penuh detail dan presisi.
-          </p>
-          <p className="mt-4 text-sm sm:text-md text-rajutGray text-justify lg:text-justify drop-shadow-md font-light">
-            Perjalanan saya bermula dari sebuah passion pribadi, namun dengan cepat berkembang menjadi sesuatu yang jauh lebih bermakna. Setiap karya yang saya hasilkan membawa sebuah cerita, sebuah kenangan, dan yang terpenting, cinta. Dari selimut bayi yang lembut hingga dekorasi rumah yang elegan, setiap ciptaan adalah bukti nyata keindahan yang lahir dari dedikasi dan keterampilan.
-          </p>
-          <p className="mt-4 flex gap-1 text-sm sm:text-md text-rajutBoldPink text-justify lg:text-justify drop-shadow-md font-bold">
-              <TfiLocationPin className="mt-[0.2em]" /> Pulisen, Boyolali, Jawa Tengah
-          </p>
-        </div>
-      </div>
+            {/* Area konten putih */}
+            <div className="relative z-10 flex flex-col items-center px-6 py-12 bg-gradient-to-t from-white via-white to-white rounded-t-3xl shadow-lg -mt-40">
+              <div className="w-full max-w-md text-center">
+                {/* Header */}
+                <div className="flex items-center justify-center gap-3 mb-3 -mt-20">
+                  <TbNeedleThread className="text-mainColor text-4xl animate-spin-slow drop-shadow-sm" />
+                  <h3 className="uppercase text-sm tracking-wider font-semibold text-mainColor">
+                    Tentang Kami
+                  </h3>
+                </div>
 
-      {/* Konten Kanan: Gambar */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-4 my-8 lg:mt-0">
-        <div className="relative inline-block">
-          {/* Bola kiri atas */}
-          <div className="absolute -top-10 -right-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-rajutLiteGold z-0 flex items-center justify-center">
-            <FaRegHeart className="text-rajutGold text-3xl sm:text-3xl" />
+                {/* Judul utama */}
+                <h1 className="text-2xl sm:text-3xl font-bold font-dancingScript text-mainColor mb-4 leading-snug">
+                  Semua berawal dari benang dan cinta yang terjalin.
+                </h1>
+
+                {/* Paragraf pembuka */}
+                <p className="text-base text-rajutGray font-light leading-relaxed mb-8 text-justify">
+                  Rajut Dyubi tumbuh dari{" "}
+                  <span className="font-medium text-mainColor">passion sederhana</span>{" "}
+                  menjadi perjalanan penuh makna. Setiap rajutan kami buat dengan hati,
+                  menghadirkan kehangatan di setiap simpul dan keindahan di setiap detail.
+                </p>
+
+
+                {/* Footer */}
+                <div className="flex flex-col items-center gap-2 text-sm">
+                  <p className="flex items-center gap-2 text-mainColor font-semibold tracking-wide">
+                    <TfiLocationPin className="text-lg animate-bounce-slow" />
+                    Pulisen, Boyolali, Jawa Tengah
+                  </p>
+                  <p className="flex mt-4 items-center gap-2 text-rajutGray italic text-center">
+                    “Rajutan hangat dari tangan, untuk hati yang mencintai keindahan.”
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-          {/* Bola kanan bawah */}
-          <div className="absolute -bottom-10 -left-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-rajutBoldPeach z-0 flex items-center justify-center">
-            <HiOutlineSparkles className="text-rajutPink text-4xl sm:text-4xl" />
           </div>
+      ) : (
+        /* ====== Jika DESKTOP: tetap layout dua kolom ====== */
+        <div className="min-h-screenNoNavbar mt-16 w-full flex flex-col lg:flex-row relative bg-cover bg-center">
+          {/* Overlay hitam transparan */}
+          <div className="absolute inset-0 bg-black/10 z-0"></div>
 
-          {/* Gambar utama */}
-          <img
-            src="/assets/img/rajut-dyubi-about-image.jpg"
-            alt="Rajut Dyubi About"
-            className={`${isMobile ? "max-h-[30vh] sm:max-h-[40vh]" : "max-h-[50vh] sm:max-h-[60vh]"}  rounded-xl w-auto object-contain drop-shadow-lg relative z-10`}
-          />
+          {/* Konten Kiri */}
+          <div className="w-full lg:w-1/2 flex items-center justify-center px-4 my-8 lg:mt-0">
+            <div className="relative w-full h-[100dvh]"> {/* pastikan tinggi sesuai banner */}
+              
+              {/* Blob di belakang */}
+              <img
+                src="/assets/img/blob.webp"
+                alt="Blob Background"
+                className="absolute top-0 left-0 w-full h-full object-contain rotate-90 z-0"
+              />
+
+              {/* Banner utama */}
+              <img
+                src="/assets/img/about-image-flip.webp"
+                alt="Rajut Dyubi Banner"
+                className="absolute top-0 left-0 w-full h-full object-contain rounded-xl drop-shadow-lg z-10"
+              />
+            </div>
+          </div>
+          
+
+          {/* Gambar Kanan */}
+          <MeetRajutDyubi />
+
+
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

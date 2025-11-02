@@ -8,20 +8,20 @@ import productsData from "../pseudo-db/productsfull.json";
 const { Option } = Select;
 
 const ProductCatalog: React.FC = () => {
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Semua");
   const [sortBy, setSortBy] = useState("name");
   const [view, setView] = useState<"grid" | "list">("grid");
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState(""); // 🔍 state untuk search
-  const pageSize = 9;
+  const pageSize = 8;
 
   // Ambil kategori unik dari products
-  const categories = ["All", ...new Set(productsData.map((p) => p.category))];
+  const categories = ["Semua", ...new Set(productsData.map((p) => p.category))];
 
   // Filter by category + search
   const filteredProducts = productsData.filter((p) => {
     const matchesCategory =
-      category === "All" ? true : p.category === category;
+      category === "Semua" ? true : p.category === category;
     const matchesSearch = p.name
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -48,17 +48,17 @@ const ProductCatalog: React.FC = () => {
     <div className="w-full bg-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Filter Section */}
-        <div className="bg-rajutPeach border rounded-lg p-4 grid grid-cols-1 sm:flex sm:flex-row sm:items-center sm:justify-between gap-3 mb-8 shadow-sm">
+        <div className="bg-gradientJourneyHorizontal border rounded-lg p-4 grid grid-cols-1 sm:flex sm:flex-row sm:items-center sm:justify-between gap-3 mb-8 shadow-sm">
         {/* Search */}
         <input
             type="text"
-            placeholder="Search products..."
+            placeholder="Cari Produk..."
             value={searchTerm}
             onChange={(e) => {
             setSearchTerm(e.target.value);
             setCurrentPage(1); 
             }}
-            className="w-full sm:w-60 px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-rajutBoldPink"
+            className="w-full sm:w-60 px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mainColor"
         />
 
         {/* Filter kategori */}
@@ -83,10 +83,10 @@ const ProductCatalog: React.FC = () => {
             onChange={(value) => setSortBy(value)}
             className="w-full sm:w-60"
         >
-            <Option value="name">Sort by Name</Option>
-            <Option value="priceAsc">Price: Low to High</Option>
-            <Option value="priceDesc">Price: High to Low</Option>
-            <Option value="rating">Rating</Option>
+            <Option value="name">Sortir berdasarkan Nama</Option>
+            <Option value="priceAsc">Harga: Rendah ke Tinggi</Option>
+            <Option value="priceDesc">Harga: Tinggi ke Rendah</Option>
+            <Option value="rating">Peringkat</Option>
         </Select>
 
         {/* Toggle Grid/List */}
@@ -95,7 +95,7 @@ const ProductCatalog: React.FC = () => {
             onClick={() => setView("grid")}
             className={`p-2 rounded-md border ${
                 view === "grid"
-                ? "bg-rajutBoldPink text-white"
+                ? "bg-mainColor text-white"
                 : "bg-white hover:bg-gray-100"
             }`}
             >
@@ -105,7 +105,7 @@ const ProductCatalog: React.FC = () => {
             onClick={() => setView("list")}
             className={`p-2 rounded-md border ${
                 view === "list"
-                ? "bg-rajutBoldPink text-white"
+                ? "bg-mainColor text-white"
                 : "bg-white hover:bg-gray-100"
             }`}
             >
@@ -127,7 +127,7 @@ const ProductCatalog: React.FC = () => {
 
         {/* Produk */}
         {view === "grid" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
             {paginatedProducts.map((product) => (
               <ProductCard key={product.productID} product={product} />
             ))}
@@ -155,7 +155,7 @@ const ProductCatalog: React.FC = () => {
         <div className="mt-1">
           {product.discountPrice ? (
             <>
-              <span className="text-rajutBoldPink font-bold mr-2">
+              <span className="text-mainColor font-bold mr-2">
                 Rp {product.discountPrice.toLocaleString("id-ID")}
               </span>
               <span className="line-through text-gray-400 text-sm">
@@ -163,7 +163,7 @@ const ProductCatalog: React.FC = () => {
               </span>
             </>
           ) : (
-            <span className="text-rajutBoldPink font-bold">
+            <span className="text-mainColor font-bold">
               Rp {product.price.toLocaleString("id-ID")}
             </span>
           )}
@@ -180,7 +180,7 @@ const ProductCatalog: React.FC = () => {
 
       {/* Tombol Pesan */}
       <div className="w-full sm:w-auto mt-4 sm:mt-0">
-        <button className="w-full sm:w-auto flex justify-center items-center gap-2 bg-rajutBoldPink text-white rounded-full px-5 py-2 text-sm font-medium hover:bg-rajutPink transition">
+        <button className="w-full sm:w-auto flex justify-center items-center gap-2 bg-mainColor text-white rounded-full px-5 py-2 text-sm font-medium hover:bg-mainColorHover transition">
           <FiShoppingBag />
           Pesan Sekarang
         </button>

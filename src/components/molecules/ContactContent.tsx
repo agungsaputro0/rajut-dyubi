@@ -30,26 +30,26 @@ const ContactContent = () => {
 
       {/* Konten Kiri */}
       <div className="flex items-center justify-center w-full px-6 sm:px-12 lg:px-16 z-10">
-        <div className="max-w-lg text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-rajutBoldPink leading-tight drop-shadow-lg font-light">
-            Get in Touch
+        <div className="max-w-2xl text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-dancingScript text-mainColor leading-tight drop-shadow-lg font-bold">
+            Tetap Terhubung
           </h1>
-          <p className="mt-4 text-sm sm:text-md text-rajutGray text-center drop-shadow-md font-light">
+          <p className="mt-4 text-lg sm:text-lg text-rajutGray text-center drop-shadow-md font-light">
              Kami senang banget kalau bisa dengar dari kamu! Mau tanya soal produk, pesan khusus, atau sekadar sapa aja, jangan ragu buat hubungi kami ya.
           </p>
         </div>
       </div>
     </div>
-     <div className="w-full bg-rajutPeach py-12">
+     <div className="w-full bg-gradientJourney py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {contact.map((item, idx) => (
             <Card
                 key={idx}
                 className="w-full h-auto text-center shadow-lg rounded-xl transition-transform transform hover:scale-105 hover:shadow-xl"
                 style={{ borderRadius: "12px" }}
             >
-                <div className="w-20 h-20 justify-self-center rounded-full bg-rajutLighterPink flex items-center justify-center text-3xl sm:text-4xl text-rajutBoldPink shadow-md">
+                <div className="w-20 h-20 justify-self-center rounded-full bg-thirdColor flex items-center justify-center text-3xl sm:text-4xl text-mainColor shadow-md">
                     {item.icon}
                 </div>
                 <div className="text-rajutGray font-bold mt-4">{item.title}</div>
