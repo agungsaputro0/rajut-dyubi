@@ -6,6 +6,9 @@ const LoginPage = () => {
     return (
         <>
         <AuthShell>
+            <h1 className="hidden">
+                Rajut Dyubi – Login
+            </h1>
             <LoginTemplate>
                 <LoginForm />
             </LoginTemplate>

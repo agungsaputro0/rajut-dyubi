@@ -8,6 +8,9 @@ import BlogCatalog from "../molecules/BlogCatalog";
 const Blog = () => {
     return (
         <AuthShell>
+            <h1 className="hidden">
+                Rajut Dyubi – Blog Benang
+            </h1>
             <LoginTemplate>
                 <BlogContent />
                 <FeaturedPosts />

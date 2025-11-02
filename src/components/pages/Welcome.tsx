@@ -11,6 +11,9 @@ const Welcome = () => {
                 <Helmet>
                     <title>{appName}</title>
                 </Helmet>
+                <h1 className="hidden">
+                   Rajut Dyubi — Produk Rajutan Kreatif, Ramah Lingkungan, & Handmade
+                </h1>
                 <LandingLayouts 
                     layoutTitle="Dirajut dengan penuh cinta"  
                     layoutSubtitle=""

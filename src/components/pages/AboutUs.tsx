@@ -7,6 +7,9 @@ import WhatDriveUs from "../molecules/WhatDriveUs";
 const AboutUs = () => {
     return (
         <AuthShell>
+            <h1 className="hidden">
+                Rajut Dyubi – Tentang Kami
+            </h1>
             <LoginTemplate>
                 <AboutUsContent />
                 <OurJourneyInNumber />

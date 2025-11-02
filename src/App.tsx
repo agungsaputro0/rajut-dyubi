@@ -26,7 +26,6 @@ const App = () => {
         <Route path="/Login" element={<RedirectIfLoggedIn><LoginPage /></RedirectIfLoggedIn>} />
       </Routes>
 
-      {/* Tambahkan container di sini */}
       <ToastContainer position="top-right" autoClose={3000} theme="light" />
     </Suspense>
   );

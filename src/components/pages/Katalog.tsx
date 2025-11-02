@@ -6,6 +6,9 @@ import ProductCatalog from "../molecules/ProductCatalog";
 const Katalog = () => {
     return (
         <AuthShell>
+            <h1 className="hidden">
+                Rajut Dyubi – Katalog Produk
+            </h1>
             <LoginTemplate>
                 <KatalogContent />
                 <ProductCatalog />

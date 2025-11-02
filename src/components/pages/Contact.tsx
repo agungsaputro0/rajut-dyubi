@@ -7,6 +7,9 @@ import ContactUs from "../molecules/ContactUs";
 const Contact = () => {
     return (
         <AuthShell>
+            <h1 className="hidden">
+                Rajut Dyubi – Contact
+            </h1>
             <LoginTemplate>
                 <ContactContent />
                 <ContactUs />
