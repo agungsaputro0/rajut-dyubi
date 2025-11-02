@@ -110,7 +110,7 @@ const LandingLayouts = (props: LandingProps) => {
 
                 <Button
                   message=""
-                  onClick={() => navigate("/katalog")}
+                  onClick={() => navigate("/Contact")}
                   variant="min-h-10 bg-transparent border-2 border-mainColor text-mainColor hover:bg-mainColorHover hover:text-white px-6 rounded-full font-poppins"
                 >
                   Pesan Kustom

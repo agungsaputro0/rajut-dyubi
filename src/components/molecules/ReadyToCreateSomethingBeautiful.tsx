@@ -17,7 +17,7 @@ const navigate = useNavigate();
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
           <Button
             message=""
-            onClick={() => navigate("/katalog")}
+            onClick={() => navigate("/Contact")}
             variant="min-h-10 w-[60vw] sm:flex-1 bg-mainColor hover:bg-mainColorHover text-white rounded-full font-poppins"
           >
             Pesan Kustom
@@ -25,10 +25,10 @@ const navigate = useNavigate();
 
           <Button
             message=""
-            onClick={() => navigate("/about-us")}
+            onClick={() => navigate("/About-us")}
             variant="min-h-10 w-[60vw] sm:flex-1 bg-transparent border-2 border-mainColor text-mainColor hover:bg-mainColorHover hover:text-white rounded-full font-poppins"
           >
-            Tetap Terhubung
+            Tentang Kami
           </Button>
         </div>
       </div>
