@@ -142,7 +142,7 @@ const BlogCatalog: React.FC = () => {
                 <div className="flex-1 text-center sm:text-left">
                   {/* Category */}
                   {blog.category && (
-                    <span className="inline-block mb-2 bg-rajutPink text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                    <span className="inline-block mb-2 bg-mainColor text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
                       {blog.category}
                     </span>
                   )}
