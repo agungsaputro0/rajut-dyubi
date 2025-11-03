@@ -51,7 +51,7 @@ const WhatDriveUs: React.FC = () => {
                     {item.icon}
                 </div>
                 <div className="text-rajutGray font-bold mt-4">{item.title}</div>
-                <div className="text-rajutGray text-[0.85em]">{item.description}</div>
+                <div className="text-rajutGray text-[1em]">{item.description}</div>
             </Card>
           ))}
         </div>

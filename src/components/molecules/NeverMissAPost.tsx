@@ -11,14 +11,14 @@ const NeverMissAPost: React.FC = () => {
           Tetap Terinspirasi Bersama Rajut Dyubi
         </h2>
         <p className="text-rajutGray max-w-2xl mx-auto mb-6 mt-6 text-lg">
-          Berlangganan newsletter kami dan dapatkan update mingguan tentang produk rajut terbaru, tutorial kreatif, dan diskon eksklusif langsung ke inbox Anda.
+          Dapatkan update mingguan tentang produk rajut terbaru, tutorial kreatif, dan diskon eksklusif langsung ke inbox Anda.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
           <Button
             message=""
             variant="min-h-10 w-[60vw] sm:flex-1 hover:bg-mainColorHover bg-mainColor hover:text-white text-white rounded-full font-poppins"
           >
-            Berlangganan NewsLetter
+            Langganan Update Mingguan
           </Button>
         </div>
       </div>

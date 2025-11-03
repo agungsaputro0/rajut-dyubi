@@ -29,7 +29,7 @@ const FeaturedCollection: React.FC = () => {
         {/* Tombol View All */}
         <div className="mt-10">
           <button onClick={() => navigate("/Katalog")} className="bg-white border border-mainColor text-mainColor px-6 py-2 rounded-full font-semibold shadow-md hover:bg-mainColor hover:text-white transition duration-200">
-            View All Products →
+            Lihat Semua Produk →
           </button>
         </div>
       </div>
