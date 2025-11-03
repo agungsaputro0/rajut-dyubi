@@ -31,7 +31,7 @@ const Navbar = () => {
       as="nav"
       className={`fixed w-full py-1 z-50 transition duration-500 ${
         isScrolled
-          ? 'backdrop-blur-xl bg-footeruplist/30 border-b border-white/20 shadow-md'
+          ? 'backdrop-blur-xl bg-thirdColor/80 border-b border-white/20 shadow-md'
           : 'backdrop-blur-lg bg-footeruplist/20'
       }`}
     >
@@ -76,7 +76,7 @@ const Navbar = () => {
                           'relative px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-300',
                           isActive
                             ? 'bg-gradient-to-r from-mainColor to-secondColor text-white shadow-md'
-                            : 'text-gray-700 hover:text-appPink hover:bg-appPink/10'
+                            : isScrolled ? 'text-mainColor hover:text-appPink hover:bg-appPink/10' : 'text-gray-700 hover:text-appPink hover:bg-appPink/10'
                         )}
                       >
                         {item.name}
@@ -93,12 +93,12 @@ const Navbar = () => {
                 <div className="flex items-center gap-3">
                   {/* Search */}
                   <button className="p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
-                    <FaSearch className="text-gray-700 text-lg" />
+                    <FaSearch className={`${isScrolled ? 'text-mainColor' : 'text-gray-700'} text-lg`} />
                   </button>
 
                   {/* Cart */}
                   <button className="relative p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
-                    <FaShoppingCart className="text-gray-700 text-lg" />
+                    <FaShoppingCart className={`${isScrolled ? 'text-mainColor' : 'text-gray-700'} text-lg`} />
                     {/* Notifikasi jumlah item */}
                     {/* <span className="absolute -top-1.5 -right-1.5 bg-rajutBoldPink text-white text-[10px] font-semibold rounded-full px-1.5 py-0.5">
                       2
@@ -121,7 +121,7 @@ const Navbar = () => {
               to={item.to}
               className={classNames(
                 baseStyle,
-                isActive ? "text-white" : "text-gray-700",
+                isActive ? "text-white" : isScrolled ? "text-mainColor" : "text-gray-700",
                 isActive && item.variant === "outline"
                   ? "border-white bg-white/10 bg-gradient-to-r from-mainColor to-secondColor"
                   : "",

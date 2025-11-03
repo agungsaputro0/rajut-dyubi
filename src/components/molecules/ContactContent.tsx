@@ -53,7 +53,7 @@ const ContactContent = () => {
                     {item.icon}
                 </div>
                 <div className="text-rajutGray font-bold mt-4">{item.title}</div>
-                <div className="text-rajutGray text-md">{item.description}</div>
+                <div className="text-rajutGray text-lg">{item.description}</div>
             </Card>
           ))}
         </div>

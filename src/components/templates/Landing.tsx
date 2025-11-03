@@ -95,7 +95,7 @@ const LandingLayouts = (props: LandingProps) => {
                 {layoutTitle} {layoutSubtitle}
               </h1>
 
-              <p className="mt-4 text-lg sm:text-md text-rajutGray text-justify drop-shadow-md font-light">
+              <p className="mt-4 text-lg sm:text-md text-rajutGray text-justify drop-shadow-md">
                 {layoutMessage}
               </p>
 

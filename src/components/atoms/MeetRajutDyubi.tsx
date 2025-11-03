@@ -25,7 +25,7 @@ const MeetRajutDyubi: React.FC = () => {
         </h1>
 
         {/* Paragraf pembuka */}
-        <p className="text-lg sm:text-base text-rajutGray font-light leading-relaxed mb-6 text-justify">
+        <p className="text-lg sm:text-base text-rajutGray leading-relaxed mb-6 text-justify">
           Rajut Dyubi tumbuh dari <span className="font-medium text-mainColor">passion sederhana</span> menjadi perjalanan penuh makna.
           Setiap rajutan kami buat dengan hati, menghadirkan kehangatan di setiap simpul dan keindahan di setiap detail.
         </p>
