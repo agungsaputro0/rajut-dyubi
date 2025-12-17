@@ -3,7 +3,6 @@ import { UseScroll } from '../hooks/UseScroll';
 import { Link, useLocation } from 'react-router-dom';
 import useIsMobile from '../hooks/UseIsMobile';
 import UseSizeSpecific from '../hooks/UseSizeSpecific';
-import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 
 const mainNav = [
   { name: 'Beranda', to: '/Welcome' },
@@ -91,19 +90,6 @@ const Navbar = () => {
               {/* 🔍 Ikon kiri (Search + Cart) */}
               {!isSpecific && (
                 <div className="flex items-center gap-3">
-                  {/* Search */}
-                  <button className="p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
-                    <FaSearch className={`${isScrolled ? 'text-mainColor' : 'text-gray-700'} text-lg`} />
-                  </button>
-
-                  {/* Cart */}
-                  <button className="relative p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all">
-                    <FaShoppingCart className={`${isScrolled ? 'text-mainColor' : 'text-gray-700'} text-lg`} />
-                    {/* Notifikasi jumlah item */}
-                    {/* <span className="absolute -top-1.5 -right-1.5 bg-rajutBoldPink text-white text-[10px] font-semibold rounded-full px-1.5 py-0.5">
-                      2
-                    </span> */}
-                  </button>
                 </div>
               )}
 

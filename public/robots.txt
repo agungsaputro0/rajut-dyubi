@@ -1,0 +1,40 @@
+# =========================================
+# robots.txt – Industrial Grade
+# Untuk seluruh mesin pencari
+# =========================================
+
+# Mengizinkan semua crawler untuk mengindeks konten publik
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /profile/
+Disallow: /private/
+Allow: /
+
+# Crawl-delay (opsional, untuk crawler yang mendukung)
+# Mengurangi beban server, dalam detik
+# Crawl-delay: 5
+
+# Sitemap untuk mesin pencari
+Sitemap: https://www.example.com/sitemap.xml
+
+# =========================================
+# Direktif spesifik untuk Googlebot
+# =========================================
+User-agent: Googlebot
+Allow: /
+
+# =========================================
+# Direktif spesifik untuk Bingbot
+# =========================================
+User-agent: Bingbot
+Allow: /
+
+# =========================================
+# Hapus parameter URL dari index (opsional)
+# =========================================
+# User-agent: *
+# Disallow: /*?*
