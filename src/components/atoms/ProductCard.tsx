@@ -38,7 +38,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
 
         {/* Rating */}
         <div className="flex items-center text-yellow-500 text-sm mt-2">
-          <Rate allowHalf disabled defaultValue={rating} className="text-xs sm:text-sm" />
+          <Rate aria-label={`Rating produk: ${rating} dari 5`} allowHalf disabled defaultValue={rating} className="text-xs sm:text-sm" />
           <span className="ml-2 text-gray-500 text-xs">({reviews})</span>
         </div>
 
