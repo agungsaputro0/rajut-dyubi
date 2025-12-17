@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { Select, Pagination } from "antd";
 import { TfiLayoutGrid3, TfiLayoutListThumb } from "react-icons/tfi";
 import { CalendarOutlined, ClockCircleOutlined, EyeOutlined, MessageOutlined } from "@ant-design/icons";
-import BlogCard from "../atoms/BlogCard";
+
+const BlogCard = React.lazy(() => import("../atoms/BlogCard"));
 import blogsData from "../pseudo-db/blog.json";
 
 const { Option } = Select;
@@ -124,7 +125,10 @@ const BlogCatalog: React.FC = () => {
         {view === "grid" ? (
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
             {paginatedBlogs.map((blog) => (
-              <BlogCard key={blog.id} blog={blog} />
+               <Suspense fallback={<div>Loading...</div>}>
+                              <BlogCard key={blog.id} blog={blog} />
+                </Suspense>
+              
             ))}
           </div>
         ) : (

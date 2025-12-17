@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { Select, Pagination, Rate } from "antd";
 import { TfiLayoutGrid3, TfiLayoutListThumb } from "react-icons/tfi";
 import { FiShoppingBag } from "react-icons/fi";
-import ProductCard from "../atoms/ProductCard";
+const ProductCard = React.lazy(() => import("../atoms/ProductCard"));
 import productsData from "../pseudo-db/productsfull.json";
 
 const { Option } = Select;
@@ -129,7 +129,9 @@ const ProductCatalog: React.FC = () => {
         {view === "grid" ? (
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
             {paginatedProducts.map((product) => (
-              <ProductCard key={product.productID} product={product} />
+              <Suspense fallback={<div>Loading...</div>}>
+                <ProductCard key={product.productID} product={product} />
+              </Suspense>
             ))}
           </div>
         ) : (
