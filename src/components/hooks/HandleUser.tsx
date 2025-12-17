@@ -352,8 +352,8 @@ export const handleUpdateUser = async (
                     active: active,
                     groups: groups
                 };
-                console.log(id);
-                console.log(pegawaiPNS);
+                // console.log(id);
+                // console.log(pegawaiPNS);
                 return await handleUpdateDataPegawaiPNS(id, pegawaiPNS);
             } else {
                 const pegawaiNonPNS = {
