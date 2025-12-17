@@ -18,3 +18,14 @@ createRoot(document.getElementById('root')!).render(
       </Provider>
   // </StrictMode>,
 );
+
+if (process.env.NODE_ENV === "production") {
+  (console.log as any) = () => {};
+  (console.warn as any) = () => {};
+  (console.error as any) = () => {};
+
+  window.addEventListener("error", (e: ErrorEvent) => e.preventDefault());
+  window.addEventListener("unhandledrejection", (e: PromiseRejectionEvent) =>
+    e.preventDefault()
+  );
+}

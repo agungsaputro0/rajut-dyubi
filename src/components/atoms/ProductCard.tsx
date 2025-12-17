@@ -1,4 +1,3 @@
-import { Rate } from "antd";
 import useIsMobile from "../hooks/UseIsMobile";
 
 interface ProductProps {
@@ -37,10 +36,15 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         </h2>
 
         {/* Rating */}
-        <div className="flex items-center text-yellow-500 text-sm mt-2">
-          <Rate aria-label={`Rating produk: ${rating} dari 5`} allowHalf disabled defaultValue={rating} className="text-xs sm:text-sm" />
+       <div className="flex items-center text-yellow-500 text-sm mt-2" aria-label={`Rating produk: ${rating} dari 5`}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <span key={i}>
+              {i + 0.5 < rating ? "★" : "☆"}
+            </span>
+          ))}
           <span className="ml-2 text-gray-500 text-xs">({reviews})</span>
         </div>
+
 
         {/* Harga */}
         <div
