@@ -12,7 +12,7 @@ const Logo: React.FC = () => {
       />
       <div style={{ marginLeft: '15px' }}>
         <h3><b><span className="text-mainColor font-dancingScript text-[1.3em]">Rajut Dyubi</span></b></h3>
-        <h5 className="text-mainColorHover text-[0.8em]">Dirajut dengan penuh cinta</h5>
+        <h4 className="text-mainColorHover text-[0.8em]">Dirajut dengan penuh cinta</h4>
       </div>
     </div>
   );

@@ -31,6 +31,7 @@ const MobileBottomNav = () => {
         >
           <div className="w-16 h-16 bg-mainColor rounded-full flex items-center justify-center shadow-lg border-4 border-white">
             <GrCatalog size={28} />
+            <span className="text-xs">Katalog</span>
           </div>
         </Link>
 
