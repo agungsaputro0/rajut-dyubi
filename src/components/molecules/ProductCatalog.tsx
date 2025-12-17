@@ -141,10 +141,15 @@ const ProductCatalog: React.FC = () => {
     >
       {/* Gambar */}
       <img
-        src={product.images[0]}
+        src={product.images[0] || '/assets/img/productDefault.png'}
         alt={product.name}
         loading="lazy"
         className="w-full max-w-[150px] h-auto object-cover rounded-lg"
+        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = '/assets/img/productDefault.png';
+                        }}
       />
 
       {/* Info Produk */}

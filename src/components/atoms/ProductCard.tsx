@@ -50,7 +50,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
             Rp {discountPrice?.toLocaleString("id-ID") || price.toLocaleString("id-ID")}
           </p>
           {discountPrice && (
-            <p className="text-sm text-gray-400 line-through">
+            <p className="text-sm text-gray-800 line-through">
               Rp {price.toLocaleString("id-ID")}
             </p>
           )}
