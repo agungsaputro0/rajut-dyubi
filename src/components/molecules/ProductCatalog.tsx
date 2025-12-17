@@ -143,6 +143,7 @@ const ProductCatalog: React.FC = () => {
       <img
         src={product.images[0]}
         alt={product.name}
+        loading="lazy"
         className="w-full max-w-[150px] h-auto object-cover rounded-lg"
       />
 

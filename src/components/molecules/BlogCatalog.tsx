@@ -137,6 +137,7 @@ const BlogCatalog: React.FC = () => {
                 <img
                   src={blog.image}
                   alt={blog.title}
+                  loading="lazy"
                   className="w-32 h-32 object-cover rounded-lg"
                 />
                 <div className="flex-1 text-center sm:text-left">
