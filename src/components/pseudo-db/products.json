@@ -1,7 +1,7 @@
 [
   {
     "productID": "1",
-    "images": ["/assets/img/produk/dompet-rajut.jpg"],
+    "images": ["/assets/img/produk/dompet-rajut.webp"],
     "name": "Dompet Rajut Double Colour",
     "price": 100000,
     "discountPrice": 75000,
@@ -10,7 +10,7 @@
   },
   {
     "productID": "2",
-    "images": ["/assets/img/produk/double-cherry.jpg"],
+    "images": ["/assets/img/produk/double-cherry.webp"],
     "name": "Double Cherry Little Cat",
     "price": 25000,
     "discountPrice": 12500,
@@ -19,7 +19,7 @@
   },
   {
     "productID": "3",
-    "images": ["/assets/img/produk/hand-bag.jpg"],
+    "images": ["/assets/img/produk/hand-bag.webp"],
     "name": "Elegant Hand Bag",
     "price": 300000,
     "discountPrice": 200000,
@@ -28,7 +28,7 @@
   },
   {
     "productID": "4",
-    "images": ["/assets/img/produk/product4.jpg"],
+    "images": ["/assets/img/produk/product4.webp"],
     "name": "Tas 2 Fungsi Tali",
     "price": 200000,
     "discountPrice": 200000,
